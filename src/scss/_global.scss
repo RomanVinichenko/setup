@@ -1,0 +1,61 @@
+body {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #646464;
+  cursor: default;
+}
+
+.container,
+.container-header {
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+.container-header {
+  max-width: 1440px;
+}
+
+button {
+  padding: 0 20px;
+  width: fit-content;
+  height: 48px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #0b0b0b;
+  background-color: #fff;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.scroll {
+  position: absolute;
+  right: 120px;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+
+  img {
+    margin-top: 12px;
+    width: 24px;
+    height: 32px;
+  }
+}

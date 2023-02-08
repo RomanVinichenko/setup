@@ -1,0 +1,67 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 20px;
+  z-index: 40;
+  background-color: transparent;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  ul {
+    display: flex;
+    margin-right: 48px;
+    margin-left: auto;
+
+    a {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    li {
+      &:first-child,
+      &:nth-child(3) {
+        a {
+          padding-right: 24px;
+
+          &::after {
+            content: url("../images/header-arrow.svg");
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      a {
+        position: relative;
+      }
+
+      + li {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    button:first-of-type {
+      margin-right: 16px;
+      border: 1px solid #fff;
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+}

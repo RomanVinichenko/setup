@@ -1,5 +1,5 @@
 {
-  "name": "parcel-template",
+  "name": "setup",
   "version": "1.0.0",
   "license": "MIT",
   "source": "src/index.html",
@@ -16,17 +16,17 @@
     "ie >= 11"
   ],
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.2",
-    "parcel": "^2.8.2",
-    "postcss": "^8.4.20",
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.21",
     "postcss-scss": "^4.0.6",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
-    "prettier": "^2.8.1",
-    "sharp": "^0.31.2",
-    "stylelint": "^14.16.0",
+    "prettier": "^2.8.4",
+    "sharp": "^0.31.3",
+    "stylelint": "^14.16.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
-    "stylelint-order": "^5.0.0",
+    "stylelint-order": "^6.0.1",
     "stylelint-scss": "^4.3.0"
   }
 }

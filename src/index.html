@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Top site, site">
-    <meta name="description" content="Top parcel template">
-    <meta name="author" content="Roma">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel template</title>
-    <link rel="stylesheet" href="scss/index.scss" />
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Setup.sa</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="scss/index.scss"/>
+</head>
 
-  <body>
-    <img src="./images/photo.jpg?as=webp" alt="Картинка">
-    <include src="./partials/header.html"></include>
-    <script src="js/index.js" type="module"></script>
-  </body>
+<body>
+<!--<include src="./partials/header.html"></include>-->
+<header class="header">
+  <div class="container-header">
+    <nav class="menu">
+      <a class="logo" href="#">
+        <img src="./images/logo.svg" alt="Logo">
+      </a>
+      <ul>
+        <li>
+          <a href="#">Products</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">en</a>
+        </li>
+      </ul>
+      <div class="menu__buttons">
+        <button>login</button>
+        <button>get started</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section class="hero">
+    <div class="container">
+      <div class="hero__wrapper">
+        <a class="scroll" href="#">
+          Scroll
+          <img src="./images/scroll.svg" alt="Scroll">
+        </a>
+        <h1>Start a Company in Saudi Arabia</h1>
+        <p>Comprehensive full and highest value to money solution to land your company in KSA</p>
+        <button>
+          watch the video
+          <img src="./images/play.svg" alt="Play">
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"></footer>
+<script src="js/index.js" type="module"></script>
+</body>
 </html>
