@@ -1,0 +1,292 @@
+.hero {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  background-image: url("../images/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 55.21%, rgba(0, 0, 0, 0.64) 100%);
+  }
+
+  &::after {
+    content: url("../images/pattern.svg");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    max-height: 708px;
+  }
+
+  .scroll {
+    right: 120px;
+    bottom: 80px;
+  }
+
+  h1 {
+    margin-bottom: 16px;
+    max-width: 549px;
+    color: #fff;
+  }
+
+  p {
+    margin-bottom: 32px;
+    max-width: 385px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+
+  button {
+    padding: 0 24px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 11vh;
+    min-height: 100vh;
+  }
+}
+
+.why {
+  position: relative;
+  padding: 140px 0;
+
+  .scroll {
+    left: 42px;
+    bottom: 56px;
+  }
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  h4 {
+    max-width: 742px;
+    font-weight: 400;
+    color: #262626;
+  }
+
+  ul {
+    display: flex;
+    margin-top: 64px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      min-height: 639px;
+      max-width: 894px;
+
+      img {
+        margin-top: auto;
+        width: 100%;
+        max-height: 194px;
+        object-fit: cover;
+      }
+
+      p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    span {
+      position: relative;
+      display: inline-block;
+      margin-right: 48px;
+      font-size: 105px;
+      line-height: 105px;
+      letter-spacing: -0.02em;
+      color: #0b0b0b;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        width: 1px;
+        height: 95px;
+        background-color: #c6c6c6;
+        transform: translateY(-50%);
+      }
+    }
+
+    h3 {
+      color: #0b0b0b;
+    }
+  }
+}
+
+.shake {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background-image: url("../images/decor-shake.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #3a5a45;
+
+  blockquote {
+    position: relative;
+    margin-bottom: 32px;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+
+    &::after {
+      content: url("../images/blockquote.svg");
+      position: absolute;
+      left: 0;
+      top: -72px;
+      width: 40px;
+      height: 40px;
+      font-size: 0;
+      line-height: 1;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 772px;
+  }
+
+  &__img {
+    align-self: flex-end;
+    width: 100%;
+    min-width: 500px;
+    max-width: 51%;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      transform: scale(1.3);
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 49%;
+
+    h5 {
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+
+    .button {
+      padding: 0 24px;
+      height: 56px;
+      color: #262626;
+
+      img {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.hacks {
+  position: relative;
+  height: 900px;
+  max-height: 900px;
+
+  h2 {
+    position: absolute;
+    top: 140px;
+    max-width: 481px;
+    color: #fff;
+  }
+
+  button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0 23px;
+    height: 72px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    transform: translate(-50%, -50%);
+
+    img {
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  h4 {
+    position: absolute;
+    bottom: 87px;
+    max-width: 430px;
+    letter-spacing: -0.02em;
+    color: #fff;
+
+    &::after {
+      content: url("../images/hacks-arrow.svg");
+      position: absolute;
+      right: -41%;
+      bottom: 9px;
+      width: 234px;
+      height: 32px;
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.line {
+  position: relative;
+  max-height: 900px;
+
+  img {
+    width: 100%;
+    max-height: 900px;
+    object-fit: cover;
+  }
+
+  .container {
+    position: absolute;
+    left: 50%;
+    bottom: 9vh;
+    z-index: 5;
+    width: 100%;
+    transform: translateX(-50%);
+
+    h2 {
+      color: #fff;
+    }
+  }
+}

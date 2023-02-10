@@ -1,9 +1,10 @@
 body {
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   color: #646464;
+  background-color: #fff;
   cursor: default;
 }
 
@@ -21,7 +22,11 @@ body {
   max-width: 1440px;
 }
 
-button {
+button,
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 20px;
   width: fit-content;
   height: 48px;
@@ -39,19 +44,51 @@ h1 {
   font-size: 64px;
   line-height: 72px;
   letter-spacing: -0.03em;
-  color: #fff;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.03em;
+  color: #0b0b0b;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+h2,
+h4 {
+  span {
+    display: inline-block;
+    color: #2d9851;
+  }
 }
 
 .scroll {
   position: absolute;
-  right: 120px;
-  bottom: 80px;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 14px;
   line-height: 20px;
-  color: #fff;
+  color: #0b0b0b;
 
   img {
     margin-top: 12px;
