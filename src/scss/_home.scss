@@ -224,16 +224,6 @@
     p {
       margin-bottom: get-vw(32px);
     }
-
-    .button {
-      padding: 0 24px;
-      height: 56px;
-      color: $gray-black;
-
-      img {
-        margin-left: 8px;
-      }
-    }
   }
 }
 
@@ -288,41 +278,6 @@
 
   &__info {
     max-width: get-vw(486px);
-  }
-
-  &__img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 50%;
-    object-fit: cover;
-  }
-}
-
-.land {
-  h2 {
-    margin-bottom: get-vw(24px);
-    max-width: get-vw(485px);
-    color: $white;
-  }
-
-  h5 {
-    margin-bottom: get-vw(32px);
-    max-width: get-vw(365px);
-    color: $white;
-  }
-
-  &__wrapper {
-    @include flex(center, center);
-
-    flex-direction: column;
-    margin: get-vw(140px) 0;
-    padding: get-vw(140px) 0;
-    text-align: center;
-    background-color: $black;
   }
 }
 
@@ -411,6 +366,9 @@
 
   ul {
     li {
+      position: relative;
+      min-height: get-vw(900px);
+
       h2 {
         margin-bottom: get-vw(8px);
       }
@@ -425,10 +383,43 @@
   }
 
   &__info {
-    max-width: get-vw(486px);
+    display: flex;
+    flex-direction: column;
+    padding: get-vw(72px) 0;
+    width: 100%;
+    height: 100%;
+    min-height: get-vw(900px);
+    max-width: 40%;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 50%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: get-vw(256px);
+      height: 100%;
+      background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__text {
+    margin-top: auto;
+
     p {
       @include fontSize(20px);
 
@@ -436,7 +427,7 @@
       color: $black;
 
       &:not(:last-child) {
-        margin-bottom: 28px;
+        margin-bottom: get-vw(28px);
       }
     }
   }
@@ -502,24 +493,50 @@
 
 .line {
   position: relative;
-  max-height: 900px;
-
-  img {
-    width: 100%;
-    max-height: 900px;
-    object-fit: cover;
-  }
+  height: get-vw(792px);
+  max-height: get-vw(792px);
 
   .container {
-    position: absolute;
-    left: 50%;
-    bottom: 9vh;
-    z-index: 5;
     width: 100%;
-    transform: translateX(-50%);
+    height: get-vw(792px);
+  }
 
-    h2 {
+  .land {
+    @include flex(center, center);
+
+    position: absolute;
+    right: get-vw(40px);
+    top: 50%;
+    z-index: 10;
+    flex-direction: column;
+    padding: get-vw(140px) get-vw(102px);
+    width: fit-content;
+    text-align: center;
+    background-color: $black;
+    transform: translateY(-50%);
+
+    h3 {
+      margin-bottom: get-vw(24px);
+      max-width: get-vw(383px);
       color: $white;
     }
+
+    h5 {
+      margin-bottom: get-vw(32px);
+      max-width: get-vw(365px);
+      color: $white;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: get-vw(792px);
+    max-height: get-vw(792px);
+    object-fit: cover;
   }
 }
