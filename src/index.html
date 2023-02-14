@@ -9,46 +9,26 @@
 </head>
 
 <body>
-<!--<include src="./partials/header.html"></include>-->
-<header class="header">
-  <div class="container-header">
-    <nav class="menu">
-      <a class="logo" href="#">
-        <img src="./images/logo.svg" alt="Logo">
-      </a>
-      <ul>
-        <li>
-          <a href="#">Products</a>
-        </li>
-        <li>
-          <a href="#">About Us</a>
-        </li>
-        <li>
-          <a href="#">en</a>
-        </li>
-      </ul>
-      <div class="menu__buttons">
-        <button>login</button>
-        <button>get started</button>
-      </div>
-    </nav>
-  </div>
-</header>
+<include src="./partials/header.html"></include>
 <main class="main">
   <section class="hero">
-    <a class="scroll" href="#">
-      Scroll
-      <img src="./images/scroll.svg" alt="Scroll">
-    </a>
     <div class="container">
+      <a class="scroll" href="#">
+        Scroll
+        <img src="./images/scroll.svg" alt="Scroll">
+      </a>
       <div class="hero__wrapper">
-
-        <h1>Start a Company in Saudi Arabia</h1>
-        <p>Comprehensive full and highest value to money solution to land your company in KSA</p>
-        <button>
-          watch the video
-          <img src="./images/play.svg" alt="Play">
-        </button>
+        <div class="hero__info">
+          <h1>Land Your Company in <span class="text__green">Saudi Arabia</span></h1>
+          <p>Comprehensive full and highest value to money solution to land your company in KSA</p>
+          <button class="btn btn__black">
+            get started
+          </button>
+        </div>
+        <div class="hero__video">
+          <button class="btn btn__play"></button>
+          <img src="./images/hero.jpeg?as=webp" alt="Company">
+        </div>
       </div>
     </div>
   </section>
@@ -58,8 +38,8 @@
       <img src="./images/scroll.svg" alt="Scroll">
     </a>
     <div class="container">
-      <h2>Why <span>us?</span></h2>
-      <h4>We built this product with the intention to <span>5x the value</span> of any other product in the market
+      <h2>Why <span class="text__green">us?</span></h2>
+      <h4 class="h4__400">We built this product with the intention to <span>5x the value</span> of any other product in the market
       </h4>
       <ul>
         <li>
@@ -76,7 +56,7 @@
           <p>
             We believe in the Vision and its direction and value; that the Kingdom is the heart of the Arab and Islamic worlds and has a huge investment power that can create a diverse economy on a strategic position between the 3 continents of Asia, Africa and Europe. We are grateful to the international companies that are helping us transform our Kingdom through innovation and technology.
           </p>
-          <img src="./images/why1.jpeg?as=webp" alt="Img of description">
+          <img src="./images/why1.jpeg?as=webp" alt="Description">
         </li>
       </ul>
     </div>
@@ -85,7 +65,7 @@
     <div class="container">
       <div class="shake__inner">
         <div class="shake__img">
-          <img src="./images/shake.png" alt="Shake">
+<!--          <img src="./images/shake.png" alt="Shake">-->
         </div>
         <div class="shake__info">
           <blockquote>
@@ -93,24 +73,37 @@
           </blockquote>
           <h5>Elham AlSharif</h5>
           <p>Consultant of Etiquette and Conduct</p>
-          <a class="button" href="#">
+          <a class="btn btn__white" href="#">
             Explore our team
             <img src="./images/arrow-button.svg" alt="Arrow button">
           </a>
         </div>
-
       </div>
     </div>
   </section>
+  <section class="people">
+    <div class="container">
+      <div class="people__wrapper">
+        <div class="people__info">
+          <h2>The Saudi <span class="text__green">People</span></h2>
+          <h4 class="h4__400">
+            The Saudi Kingdom has existed for over 300 years now. Yet, it wasn’t until 1932 that the third Kingdom of Saudi Arabia came into being.
+          </h4>
+        </div>
+        <button>Explore</button>
+      </div>
+      <img class="people__img" src="./images/people.jpeg?as=webp" alt="People">
+    </div>
+  </section>
   <section class="line">
-    <img src="images/line.jpeg" alt="Project">
+    <img src="images/line.jpeg?as=webp" alt="Project">
     <div class="container">
       <h2>The Line</h2>
       <h2>Vision2030 is our mission!</h2>
     </div>
   </section>
   <section class="hacks">
-    <img src="./images/hacks.jpeg" alt="Hacks">
+    <img src="./images/hacks.jpeg?as=webp" alt="Hacks">
     <button>
       <img src="./images/play.svg" alt="Play">
     </button>
@@ -120,11 +113,7 @@
     </div>
   </section>
 </main>
-<footer class="footer">
-  <div class="container">
-
-  </div>
-</footer>
+<include src="./partials/footer.html"></include>
 <script src="js/index.js" type="module"></script>
 </body>
 </html>

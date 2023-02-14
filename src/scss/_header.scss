@@ -2,54 +2,55 @@
   position: fixed;
   left: 0;
   right: 0;
-  top: 20px;
+  top: get-vw(20px);
   z-index: 40;
   background-color: transparent;
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 48px;
+  @include flex(center, space-between);
+
+  .logo {
+    width: get-vw(180px);
+  }
 
   ul {
     display: flex;
-    margin-right: 48px;
+    margin-right: get-vw(40px);
     margin-left: auto;
 
     a {
+      @include fontSize(14px);
+
+      position: relative;
       font-weight: 700;
-      font-size: 14px;
-      line-height: 24px;
+      line-height: 1.71;
       letter-spacing: -0.01em;
       text-transform: uppercase;
-      color: #fff;
+      color: $black;
     }
 
     li {
-      &:first-child,
-      &:nth-child(3) {
-        a {
-          padding-right: 24px;
-
-          &::after {
-            content: url("../images/header-arrow.svg");
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 24px;
-            height: 24px;
-          }
-        }
-      }
-
-      a {
-        position: relative;
-      }
-
       + li {
-        margin-left: 40px;
+        margin-left: get-vw(40px);
+      }
+    }
+  }
+
+  &__drop {
+    a {
+      padding-right: get-vw(24px);
+
+      &::after {
+        @include bg-contain;
+
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: get-vw(24px);
+        height: get-vw(24px);
+        background-image: url("../images/header-arrow.svg");
       }
     }
   }
@@ -57,11 +58,8 @@
   &__buttons {
     display: flex;
 
-    button:first-of-type {
-      margin-right: 16px;
-      border: 1px solid #fff;
-      color: #fff;
-      background-color: transparent;
+    button:first-child {
+      margin-right: get-vw(16px);
     }
   }
 }

@@ -1,7 +1,5 @@
-<svg width="708" height="708" viewBox="0 0 708 708" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.24">
-<path d="M0 708L354 353.851V708H0Z" fill="white"/>
-<path d="M354 708L708 353.851V708H354Z" fill="white"/>
-<path d="M354 353.851L708 0V353.851H354Z" fill="white"/>
-</g>
+<svg width="463" height="464" viewBox="0 0 463 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M231.5 464L463 231.902V464H231.5Z" fill="#F8F8F8"/>
+<path d="M231.5 231.902L463 0V231.902H231.5Z" fill="#F8F8F8"/>
+<path d="M0 464L231.5 231.902V464H0Z" fill="#F8F8F8"/>
 </svg>

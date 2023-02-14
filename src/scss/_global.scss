@@ -1,98 +1,206 @@
 body {
+  @include fontSize(16px);
+
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #646464;
-  background-color: #fff;
+  line-height: 1.5;
+  color: $gray-dark;
+  background-color: $white;
   cursor: default;
+}
+
+.container {
+  max-width: calc(100% - 8px);
+
+  @media (min-width: 576px) {
+    max-width: calc(100% - 20px);
+  }
+
+  @media (min-width: 768px) {
+    max-width: calc(100% - 20px);
+  }
+
+  @media (min-width: 992px) {
+    max-width: calc(100% - 46px);
+  }
+
+  @media (min-width: 120px) {
+    max-width: calc(100% - 46px);
+  }
+
+  @media (min-width: 1400px) {
+    max-width: get-vw(1248px);
+  }
+
+  @media (min-width: 1800px) {
+    max-width: get-vw(1440px);
+  }
 }
 
 .container,
 .container-header {
+  position: relative;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 get-vw(40px);
 }
 
 .container {
-  max-width: 1280px;
+  max-width: get-vw(1280px);
 }
 
 .container-header {
-  max-width: 1440px;
+  max-width: get-vw(1440px);
 }
 
-button,
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
+.btn {
+  @include flex(center, center);
+  @include fontSize(14px);
+
+  position: relative;
+  padding: 0 get-vw(24px);
   width: fit-content;
-  height: 48px;
+  height: get-vw(56px);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: -0.01em;
+  text-decoration: none;
   text-transform: uppercase;
-  color: #0b0b0b;
-  background-color: #fff;
+
+  img {
+    margin-left: get-vw(5px);
+    width: get-vw(24px);
+    height: get-vw(24px);
+  }
+
+  &.btn__narrow {
+    padding: 0 get-vw(20px);
+    height: get-vw(48px);
+    color: $white;
+    background-color: $black;
+  }
+
+  &.btn__black {
+    color: $white;
+    background-color: $black;
+  }
+
+  &.btn__white {
+    color: $gray-black;
+    background-color: $white;
+  }
+
+  &.btn__blank {
+    padding: 0 get-vw(20px);
+    height: get-vw(48px);
+    border: get-vw(1px) solid $black;
+    color: $black;
+    background-color: transparent;
+  }
+
+  &.btn__play {
+    width: get-vw(72px);
+    height: get-vw(72px);
+    font-size: 0;
+    line-height: 1;
+    background-color: $black;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: get-vw(24px);
+      height: get-vw(24px);
+      background-image: url("../images/play.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.text__green {
+  display: inline-block;
+  color: $green;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
 }
 
 h1 {
-  font-weight: 900;
-  font-size: 64px;
-  line-height: 72px;
-  letter-spacing: -0.03em;
+  @include fontSize(64px);
+
+  line-height: 1.12;
 }
 
 h2 {
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.03em;
-  color: #0b0b0b;
+  @include fontSize(48px);
+
+  line-height: 1.17;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 40px;
-  line-height: 48px;
+  @include fontSize(40px);
+
+  line-height: 1.2;
   letter-spacing: -0.03em;
 }
 
 h4 {
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: -0.01em;
+  @include fontSize(32px);
+
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+
+  &.h4__400 {
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
 }
 
 h5 {
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: -0.01em;
-}
+  @include fontSize(24px);
 
-h2,
-h4 {
-  span {
-    display: inline-block;
-    color: #2d9851;
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+
+  &.h5__400 {
+    font-weight: 400;
   }
 }
 
 .scroll {
+  @include flex(center, center);
+  @include fontSize(14px);
+
   position: absolute;
   z-index: 5;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: 14px;
-  line-height: 20px;
-  color: #0b0b0b;
+  line-height: 1.43;
+  color: $black;
 
   img {
-    margin-top: 12px;
-    width: 24px;
-    height: 32px;
+    margin-top: get-vw(12px);
+    width: get-vw(24px);
+    height: get-vw(32px);
   }
 }
