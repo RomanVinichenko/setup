@@ -188,6 +188,45 @@ h5 {
   }
 }
 
+.custom-btn {
+  @include fontSize(14px);
+
+  position: relative;
+  margin-left: get-vw(126px);
+  padding-left: get-vw(72px);
+  height: get-vw(56px);
+  border: none;
+  font-weight: 700;
+  line-height: 1.71;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: $gray-black;
+
+  &::before {
+    @include bg-contain;
+
+    content: "";
+    position: absolute;
+    left: get-vw(16px);
+    top: 50%;
+    z-index: 10;
+    width: get-vw(24px);
+    height: get-vw(24px);
+    background-image: url("../images/plus.svg");
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: get-vw(56px);
+    height: get-vw(56px);
+    background-color: $black;
+  }
+}
+
 .scroll {
   @include flex(center, center);
   @include fontSize(14px);
