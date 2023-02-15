@@ -188,6 +188,10 @@ h5 {
   }
 }
 
+.logo {
+  width: get-vw(180px);
+}
+
 .custom-btn {
   @include fontSize(14px);
 

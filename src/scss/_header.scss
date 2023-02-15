@@ -10,10 +10,6 @@
 .menu {
   @include flex(center, space-between);
 
-  .logo {
-    width: get-vw(180px);
-  }
-
   ul {
     display: flex;
     margin-right: get-vw(40px);
