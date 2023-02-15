@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Setup.sa</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="scss/index.scss"/>
+</head>
+
+<body>
+<div class="preloader">
+</div>
+<include src="./partials/header.html"></include>
+<main class="main">
+  <section class="terms error">
+    <div class="container">
+      <h1>Page not found</h1>
+      <div class="error__wrapper">
+        <div class="error__info">
+          <h5 class="h5__400">
+            We're unable to find the page you are looking for. Press the link below to get to the home page.
+          </h5>
+          <a class="btn btn__black" href="index.html">home page</a>
+        </div>
+        <div class="error__message">
+          <p>404</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<include src="./partials/footer.html"></include>
+<script src="js/index.js" type="module"></script>
+</body>
+</html>

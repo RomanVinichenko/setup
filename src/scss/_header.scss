@@ -2,9 +2,15 @@
   position: fixed;
   left: 0;
   right: 0;
-  top: get-vw(20px);
   z-index: 40;
+  padding: get-vw(20px) 0 0 0;
   background-color: transparent;
+  transition: padding 0.3s;
+}
+
+.header--active {
+  padding: get-vw(10px) 0;
+  background-color: $white;
 }
 
 .menu {
