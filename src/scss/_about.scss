@@ -190,6 +190,10 @@
       }
     }
   }
+  .panel-collapse{
+    overflow: hidden;
+    height: 0;
+  }
 
   .panel-body {
     padding-bottom: get-vw(32px);

@@ -1,24 +1,60 @@
 // Header
-let scrollPos = window.scrollY
+import gsap from "gsap"
+import ScrollTrigger from "gsap/ScrollTrigger"
+import ScrollToPlugin from "gsap/ScrollToPlugin"
+// import {Home} from "./page/Home";
+import {Header} from "./part/header";
+import {AboutPage} from "./page/About";
+// import {Footer} from "./part/Footer";
 
-const header = document.querySelector(".header")
-const scrollChange = 10
+export const APP = {}
 
-window.addEventListener('scroll', function() {
-  scrollPos = window.scrollY;
+window.APP = APP
+APP.gsap = gsap
+APP.gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+APP.ScrollTrigger = ScrollTrigger
 
-  if (scrollPos >= scrollChange) {
-    header.classList.add("header--active")
-  }
-  else {
-    header.classList.remove("header--active")
-  }
-})
 
-window.onload = function(){
-  //hide the preloader
+const initApp = () => {
+  APP.isPhoneDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   document.querySelector(".preloader").style.cssText = `
-  opacity: 0;
-  z-index: -1;
-  `
+    opacity: 0;
+    z-index: -1;
+    `
+
+  if(document.getElementById('about')) {
+    APP.Page = new AboutPage()
+  }
+
+
+  APP.Header = new Header()
+  // APP.Footer = new Footer()
+
+}
+
+
+
+
+
+
+
+window.addEventListener("resize", ()=>{
+  APP.isPhoneDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if(APP.isPhoneDevice){
+    document.body.classList.add('mobile')
+  } else {
+    document.body.classList.remove('mobile')
+  }
+
+}, false);
+
+if(APP.isPhoneDevice){
+  document.body.classList.add('mobile')
+}
+
+
+try {
+  window.addEventListener("load", initApp, false);
+} catch(e) {
+  window.onload = initApp;
 }

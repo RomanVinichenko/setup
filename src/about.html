@@ -15,7 +15,7 @@
 
 <include src="./partials/header.html"></include>
 <include src="./partials/cookies.html"></include>
-<main class="main">
+<main class="main" id="about">
   <section class="pre">
     <img src="./images/about.jpeg?as=webp" alt="Product">
     <div class="container">
@@ -232,17 +232,17 @@
           <img src="./images/tradition.jpeg?as=webp" alt="Person">
         </div>
         <div class="panel-group" id="accordion">
-          <div class="panel" style="visibility: visible; animation-name: fade;">
-            <div class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <div class="panel" >
+            <div class="panel-title item_title">
+              <div class="accordion-toggle" data-toggle="collapse">
                 <div class="panel__wrapper">
                   <span>01</span>
                   <p>We stick to our traditions</p>
                   <button></button>
                 </div>
-              </a>
+              </div>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div  class="panel-collapse in item_content">
               <div class="panel-body">
                 <p>
                   We’re not here for business only! Rather to take our country to the next level. We care about
@@ -255,19 +255,18 @@
               </div>
             </div>
           </div>
-          <div class="panel" style="visibility: visible; animation-name: fade;">
-            <div class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion"
-                 href="#collapseTwo">
+          <div class="panel">
+            <div class="panel-title item_title">
+              <div class="accordion-toggle collapsed" data-toggle="collapse" >
                 <div class="panel__wrapper">
                   <span>02</span>
                   <p>Vision2030 is our Mission</p>
                   <button></button>
                 </div>
-              </a>
+              </div>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
+            <div class="panel-collapse item_content">
+              <div class="panel-body ">
                 <p>
                   We’re not here for business only! Rather to take our country to the next level. We care about
                   contributing to the Vision and supporting our economy through technology, industry and innovation.
@@ -279,18 +278,18 @@
               </div>
             </div>
           </div>
-          <div class="panel" style="visibility: visible; animation-name: fade;">
-            <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion"
-                 href="#collapseThree">
+          <div class="panel" >
+            <h6 class="panel-title item_title">
+              <div class="accordion-toggle collapsed" data-toggle="collapse"
+                >
                 <div class="panel__wrapper">
                   <span>03</span>
                   <p>We care!</p>
                   <button></button>
                 </div>
-              </a>
+              </div>
             </h6>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div  class="panel-collapse item_content">
               <div class="panel-body">
                 <p>
                   We’re not here for business only! Rather to take our country to the next level. We care about
@@ -304,17 +303,16 @@
             </div>
           </div>
           <div class="panel" style="visibility: visible; animation-name: fade;">
-            <h6 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion"
-                 href="#collapseFour">
+            <h6 class="panel-title item_title">
+              <div class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion">
                 <div class="panel__wrapper">
                   <span>04</span>
                   <p>We are value-driven</p>
                   <button></button>
                 </div>
-              </a>
+              </div>
             </h6>
-            <div id="collapseFour" class="panel-collapse collapse">
+            <div id="collapseFour" class="panel-collapse item_content">
               <div class="panel-body">
                 <p>
                   We’re not here for business only! Rather to take our country to the next level. We care about
@@ -385,8 +383,7 @@
   </section>
 </main>
 <include src="./partials/footer.html"></include>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
 <script src="js/index.js" type="module"></script>
 </body>
 </html>
