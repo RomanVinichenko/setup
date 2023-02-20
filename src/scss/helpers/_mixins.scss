@@ -15,3 +15,76 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin fontSize($size) {
+  font-size: get-vw($size);
+}
+
+// function convert px to vh
+@function get-vw($font) {
+  $vw-context: ($vw-viewport * 0.01 * 1px);
+
+  @return calc($font / $vw-context * 1vw);
+  @return $font;
+}
+
+// fonts style mixin
+//@mixin font_64 {
+//  font-size: 56px;
+//  line-height: 1.12;
+//  +f_600;
+//  letter-spacing: - 0.02em;
+//  @media (min-width: 1900px) {
+//  +fontSize(64px);
+//  }
+//  @media (max-width: 767px) {
+//    font-size: 40px;
+//    line-height: 1.2;
+//  }
+//}
+
+//=
+//font_12__600 {
+//  font-size: 12px;
+//  line-height: 1.7;
+//+ f_600;
+//  @media (min-width: 1900px) {
+//  + fontSize(12px);
+//  }
+//}
+
+//=
+//font_12 {
+//+ font_12__600;
+//+ f_400;
+//}
+
+//fonts class
+//.font_64 {
+//  + font_64;
+//}
+
+//.font_12__600 {
+//+ font_12__600;
+//}
+//
+//.font_12 {
+//+ font_12;
+//}
+
+//color fonts
+
+//.text_black {
+//  color: $black;
+//}
+
+// font weight
+//.f_600 {
+//+ f_600;
+//}

@@ -8,7 +8,6 @@ export class Accordion{
 
     }
 
-
     intFaqList(el){
 
         let panelItem = el.querySelectorAll('.panel')

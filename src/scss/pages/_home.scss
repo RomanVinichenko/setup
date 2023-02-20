@@ -8,7 +8,7 @@
     z-index: -2;
     width: get-vw(285px);
     height: get-vw(285px);
-    background-image: url("../images/pattern1.svg");
+    background-image: url("/src/images/pattern1.svg");
     transform: translateY(-50%);
   }
 
@@ -22,7 +22,7 @@
     z-index: -2;
     width: get-vw(463px);
     height: get-vw(464px);
-    background-image: url("../images/pattern.svg");
+    background-image: url("/src/images/pattern.svg");
   }
 
   .scroll {
@@ -157,7 +157,7 @@
   position: relative;
   overflow: hidden;
   color: $white;
-  background-image: url("../images/decor-shake.svg");
+  background-image: url("/src/images/decor-shake.svg");
   background-position: bottom right;
   background-color: $green-black;
 
@@ -185,7 +185,7 @@
       height: get-vw(40px);
       font-size: 0;
       line-height: 1;
-      background-image: url("../images/blockquote.svg");
+      background-image: url("/src/images/blockquote.svg");
     }
   }
 
@@ -229,7 +229,7 @@
     width: 100%;
     min-height: get-vw(772px);
     max-width: 51%;
-    background-image: url("../images/shake.png");
+    background-image: url("/src/images/shake.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -500,7 +500,7 @@
       bottom: get-vw(8px);
       width: get-vw(161px);
       height: get-vw(32px);
-      background-image: url("../images/hacks-arrow.svg");
+      background-image: url("/src/images/hacks-arrow.svg");
     }
   }
 

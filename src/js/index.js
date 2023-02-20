@@ -3,7 +3,7 @@ import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import ScrollToPlugin from "gsap/ScrollToPlugin"
 // import {Home} from "./page/Home";
-import {Header} from "./part/header";
+import {Header} from "./part/Header";
 import {AboutPage} from "./page/About";
 // import {Footer} from "./part/Footer";
 
@@ -13,7 +13,6 @@ window.APP = APP
 APP.gsap = gsap
 APP.gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 APP.ScrollTrigger = ScrollTrigger
-
 
 const initApp = () => {
   APP.isPhoneDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -26,17 +25,9 @@ const initApp = () => {
     APP.Page = new AboutPage()
   }
 
-
   APP.Header = new Header()
   // APP.Footer = new Footer()
-
 }
-
-
-
-
-
-
 
 window.addEventListener("resize", ()=>{
   APP.isPhoneDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -51,7 +42,6 @@ window.addEventListener("resize", ()=>{
 if(APP.isPhoneDevice){
   document.body.classList.add('mobile')
 }
-
 
 try {
   window.addEventListener("load", initApp, false);

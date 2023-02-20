@@ -138,7 +138,7 @@ body {
       top: 50%;
       width: get-vw(24px);
       height: get-vw(24px);
-      background-image: url("../images/play.svg");
+      background-image: url("/src/images/play.svg");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -187,7 +187,13 @@ h1 {
 h2 {
   @include fontSize(48px);
 
+  margin-bottom: get-vw(64px);
   line-height: 1.17;
+
+  span {
+    display: inline-block;
+    color: $green;
+  }
 }
 
 h3,
@@ -254,7 +260,7 @@ h5 {
     z-index: 10;
     width: get-vw(24px);
     height: get-vw(24px);
-    background-image: url("../images/plus.svg");
+    background-image: url("/src/images/plus.svg");
     transform: translateY(-50%);
   }
 
@@ -333,7 +339,7 @@ h5 {
         top: 50%;
         width: get-vw(24px);
         height: get-vw(24px);
-        background-image: url("../images/cookies.svg");
+        background-image: url("/src/images/cookies.svg");
         transform: translateY(-50%);
       }
 
@@ -362,7 +368,7 @@ h5 {
       height: get-vw(13px);
       min-width: get-vw(13px);
       min-height: get-vw(13px);
-      background-image: url("../images/close.svg");
+      background-image: url("/src/images/close.svg");
       transform: translate(-50%, -50%);
     }
   }

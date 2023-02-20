@@ -61,7 +61,7 @@
       top: 50%;
       width: get-vw(16px);
       height: get-vw(16px);
-      background-image: url("../images/linkedin.svg");
+      background-image: url("/src/images/linkedin.svg");
       filter: invert(1);
       transform: translate(-50%, -50%);
     }
@@ -102,19 +102,59 @@
     margin-bottom: get-vw(64px);
   }
 
+  .panel {
+    cursor: pointer;
+  }
+
   .panel-group {
-    width: 100%;
     height: fit-content;
     max-width: get-vw(486px);
     border-bottom: get-vw(1px) solid $gray-medium;
   }
 
-  .accordion-toggle {
-    padding: get-vw(32px) 0 get-vw(16px);
-    border-top: get-vw(1px) solid $black;
+  .item_title {
+    display: flex;
+    align-items: center;
+    padding: get-vw(32px) 0;
+    border-top: get-vw(1px) solid $gray-medium;
     transition: all 0.3s;
 
+    button {
+      position: relative;
+      margin-left: auto;
+      width: get-vw(36px);
+      height: get-vw(36px);
+      min-width: get-vw(36px);
+      min-height: get-vw(36px);
+      border: get-vw(1px) solid $black;
+      background-color: transparent;
+      transition: all 0.3s;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: $black;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s;
+      }
+
+      &::before {
+        opacity: 0;
+        width: get-vw(1px);
+        height: get-vw(8px);
+      }
+
+      &::after {
+        width: get-vw(8px);
+        height: get-vw(1px);
+      }
+    }
+
     span {
+      position: relative;
       margin-right: get-vw(32px);
     }
 
@@ -127,72 +167,11 @@
       line-height: 1.4;
       color: $black;
     }
-
-    .panel__wrapper {
-      display: flex;
-      align-items: center;
-      height: get-vw(36px);
-
-      button {
-        position: relative;
-        margin-left: auto;
-        width: get-vw(36px);
-        height: get-vw(36px);
-        min-width: get-vw(36px);
-        min-height: get-vw(36px);
-        border: get-vw(1px) solid $black;
-        background-color: transparent;
-        transition: all 0.3s;
-
-        &::after,
-        &::before {
-          content: "";
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          background-color: $black;
-          transform: translate(-50%, -50%);
-          transition: all 0.3s;
-        }
-
-        &::before {
-          opacity: 0;
-          width: get-vw(1px);
-          height: get-vw(8px);
-        }
-
-        &::after {
-          width: get-vw(8px);
-          height: get-vw(1px);
-        }
-      }
-    }
-
-    &.collapsed {
-      padding: get-vw(32px) 0;
-      border-top: get-vw(1px) solid $gray-medium;
-      transition: all 0.3s;
-
-      .panel__wrapper {
-        button {
-          background-color: $black;
-          transition: all 0.3s;
-
-          &::after,
-          &::before {
-            background-color: $white;
-          }
-
-          &::before {
-            opacity: 1;
-          }
-        }
-      }
-    }
   }
-  .panel-collapse{
-    overflow: hidden;
+
+  .panel-collapse {
     height: 0;
+    overflow: hidden;
   }
 
   .panel-body {

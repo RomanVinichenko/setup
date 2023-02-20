@@ -6,7 +6,6 @@ export class AboutPage{
         this.loadAccordion()
     }
 
-
     loadAccordion(){
      const section = this.page.querySelector('.benefits')
         new Accordion(section)

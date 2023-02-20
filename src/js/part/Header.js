@@ -11,7 +11,6 @@ export class Header {
 
     }
 
-
     addScrollEvent(){
         window.addEventListener('scroll', ()=> {
             this.scrollPos = window.scrollY;
@@ -23,9 +22,5 @@ export class Header {
                 this.header.classList.remove("header--active")
             }
         })
-
-
-
     }
-
 }

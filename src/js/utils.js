@@ -21,7 +21,6 @@ export function unblockScroll(){
     // const scrollClass = window.APP.smoothScroll;
     // scrollClass.enableScroll()
 
-
     const scrollY = document.body.style.top;
     document.body.classList.remove('no-scroll');
     document.body.style.paddingRight = '';

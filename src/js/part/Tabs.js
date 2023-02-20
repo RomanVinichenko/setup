@@ -5,9 +5,7 @@ export class Tabs {
         // this.btn =  this.tab.querySelectorAll('.tab_toggle');
         this.loadTab();
     }
-
     loadTab(){
         // function for tab
-
     }
 }

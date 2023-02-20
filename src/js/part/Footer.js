@@ -7,14 +7,8 @@ export class Footer {
         this.footer = document.querySelector('#footer')
 
         if(APP.isPhoneDevice){
-
             /// load for phome
         }
-
         // new Tabs('test name')
-
     }
-
-
-
 }

@@ -10,6 +10,4 @@ export class Home {
         const slider = this.page.querySelector(`#section_id`);
 
     }
-
-
 }
