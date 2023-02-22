@@ -5,6 +5,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin"
 // import {Home} from "./page/Home";
 import {Header} from "./part/Header";
 import {AboutPage} from "./page/About";
+import {SetupPage} from "./page/Setup";
 // import {Footer} from "./part/Footer";
 
 export const APP = {}
@@ -23,6 +24,9 @@ const initApp = () => {
 
   if(document.getElementById('about')) {
     APP.Page = new AboutPage()
+  }
+  if(document.getElementById('setup')) {
+    APP.Page = new SetupPage()
   }
 
   APP.Header = new Header()

@@ -10,5 +10,4 @@ export class AboutPage{
      const section = this.page.querySelector('.benefits')
         new Accordion(section)
     }
-
 }

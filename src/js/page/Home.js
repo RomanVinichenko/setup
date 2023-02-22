@@ -8,6 +8,5 @@ export class Home {
 
     initSection(){
         const slider = this.page.querySelector(`#section_id`);
-
     }
 }

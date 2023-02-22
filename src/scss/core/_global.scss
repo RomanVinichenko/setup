@@ -237,31 +237,24 @@ h5 {
 }
 
 .custom-btn {
-  @include fontSize(14px);
-
   position: relative;
-  margin-left: get-vw(126px);
-  padding-left: get-vw(72px);
+  margin-top: auto;
+  width: get-vw(56px);
   height: get-vw(56px);
   border: none;
-  font-weight: 700;
-  line-height: 1.71;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  color: $gray-black;
 
   &::before {
     @include bg-contain;
 
     content: "";
     position: absolute;
-    left: get-vw(16px);
+    left: 50%;
     top: 50%;
     z-index: 10;
     width: get-vw(24px);
     height: get-vw(24px);
     background-image: url("/src/images/plus.svg");
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
   }
 
   &::after {
