@@ -12,48 +12,47 @@ body {
   cursor: default;
 }
 
-//.container {
-//  max-width: calc(100% - 8px);
-//
-//  @media (min-width: 576px) {
-//    max-width: calc(100% - 20px);
-//  }
-//
-//  @media (min-width: 768px) {
-//    max-width: calc(100% - 20px);
-//  }
-//
-//  @media (min-width: 992px) {
-//    max-width: calc(100% - 46px);
-//  }
-//
-//  @media (min-width: 120px) {
-//    max-width: calc(100% - 46px);
-//  }
-//
-//  @media (min-width: 1400px) {
-//    max-width: get-vw(1248px);
-//  }
-//
-//  @media (min-width: 1800px) {
-//    max-width: get-vw(1440px);
-//  }
-//}
+.container {
+  max-width: calc(100% - 8px);
+
+  @media (min-width: 576px) {
+    max-width: calc(100% - 20px);
+  }
+
+  @media (min-width: 768px) {
+    max-width: calc(100% - 20px);
+  }
+
+  @media (min-width: 992px) {
+    max-width: calc(100% - 46px);
+  }
+
+  @media (min-width: 120px) {
+    max-width: calc(100% - 46px);
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1800px) {
+    max-width: get-vw(1440px);
+  }
+}
 
 .container,
 .container-header {
   position: relative;
   margin: 0 auto;
   padding: 0 get-vw(40px);
-  width: 100%;
 }
 
 .container {
-  max-width: get-vw(1280px);
+  //max-width: get-vw(1440px);
 }
 
 .container-header {
-  max-width: get-vw(1440px);
+  //max-width: get-vw(1440px);
 }
 
 .btn {
