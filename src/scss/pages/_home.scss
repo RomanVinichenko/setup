@@ -151,6 +151,30 @@
   }
 }
 
+.scrollable_section{
+  overflow: hidden;
+  height: 100vh;
+  .horizontal_scroll{
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding-left: get-vw(120px);
+
+  }
+  .scroll__item{
+    display: none;
+
+    @media (min-width: 1200px) {
+      width: 62vw;
+      flex: 0 0 62vw;
+      display: block;
+      margin: 0 get-vw(126px);
+    }
+  }
+
+}
+
 .shake {
   @include bg-contain;
 
@@ -353,10 +377,14 @@
 
   &__wrapper {
     @include flex(flex-start, space-between);
+
   }
 
   &__info {
     max-width: get-vw(305px);
+    position: sticky;
+    top: 200px;
+
 
     h4 {
       color: $gray-black;
@@ -425,6 +453,7 @@
     margin-bottom: get-vw(64px);
   }
 
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -471,6 +500,61 @@
 
       &:not(:last-child) {
         margin-bottom: get-vw(28px);
+      }
+    }
+  }
+  &_section{
+    .left_side{
+      height: 100vh;
+      width: 50vw;
+      position: absolute;
+      .giga__info{
+        left: get-vw(120px);
+        padding-top: get-vw(72px);
+        padding-bottom: get-vw(72px);
+        padding-right: get-vw(100px);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        min-width: calc(100% - #{get-vw(120px)});
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .title{
+          opacity: 0;
+          transform: translateY(-25px);
+        }
+        .subtitle{
+          opacity: 0;
+          transform: translateY(-25px);
+        }
+        .giga__text{
+          opacity: 0;
+          transform: translateY(-25px);
+        }
+
+      }
+    }
+    .right_side{
+      width: 50vw;
+      margin-left: 50vw;
+
+
+      .giga__img {
+        position: static;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        img{
+          max-width: unset;
+
+        }
+
       }
     }
   }

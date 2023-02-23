@@ -17,10 +17,20 @@
 .team {
   padding: get-vw(140px) 0;
 
+
+
   ul {
     display: grid;
     grid-gap: get-vw(24px);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    li{
+      position: relative;
+      .custom-btn{
+        position: absolute;
+        top: 9px;
+        right: 9px;
+      }
+    }
   }
 
   h2 {
@@ -292,6 +302,14 @@
     img {
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+#teamPopup{
+  .popup-content{
+    display: none;
+    &.current{
+      display: block;
     }
   }
 }
