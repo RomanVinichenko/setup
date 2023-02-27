@@ -1,4 +1,4 @@
-.terms {
+.general-page {
   padding: get-vw(160px) 0 get-vw(120px);
 
   h1 {
@@ -7,23 +7,19 @@
     border-bottom: get-vw(1px) solid $gray-medium;
   }
 
-  .btn__black,
-  .btn__white {
+  &__wrapper {
+    @include flex(flex-start, space-between);
+  }
+}
+
+.terms {
+  .btn {
     margin: get-vw(16px) 0;
   }
 
   .btn__white {
     border: get-vw(1px) solid $gray-medium;
     color: $black;
-  }
-
-  &__btn-black {
-    background-color: $black;
-  }
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
   }
 
   &__main {
@@ -110,32 +106,67 @@
   }
 }
 
+.thank {
+  padding: get-vw(160px) 0 get-vw(58px);
+
+  .general-page__img {
+    img {
+      width: get-vw(486px);
+      height: get-vw(486px);
+    }
+  }
+}
+
+.thank,
 .error {
   h5 {
     margin-bottom: get-vw(32px);
     max-width: get-vw(384px);
   }
+}
 
-  .btn__black,
-  .btn__white {
-    margin: 0;
-  }
+.error {
+  padding: get-vw(160px) 0 get-vw(75px);
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
+  .general-page__text {
+    margin-right: get-vw(24px);
   }
 
   &__message {
-    margin-top: get-vw(46px);
+    position: relative;
+    padding: 0;
+
+    &::after,
+    &::before {
+      @include bg-contain;
+
+      content: "";
+      position: absolute;
+      width: get-vw(283px);
+      height: get-vw(282px);
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+      background-image: url("/src/images/error-decor.svg");
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      background-image: url("/src/images/error-decor2.svg");
+    }
 
     p {
       @include fontSize(450px);
 
+      position: relative;
+      padding: get-vw(96px) get-vw(60px) 0 get-vw(42px);
       font-weight: 500;
       line-height: 1;
       letter-spacing: -0.06em;
-      color: $gray-medium;
+      color: $green;
     }
   }
 }

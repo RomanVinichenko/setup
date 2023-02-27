@@ -5,6 +5,10 @@
     margin-bottom: get-vw(48px);
   }
 
+  h2 {
+    margin-bottom: 0;
+  }
+
   h5 {
     margin-bottom: get-vw(32px);
 
@@ -21,12 +25,6 @@
     li {
       position: relative;
       min-height: get-vw(700px);
-    }
-  }
-
-  .btn {
-    img {
-      margin-left: get-vw(16px);
     }
   }
 

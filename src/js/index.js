@@ -7,6 +7,7 @@ import {Header} from "./part/Header";
 import {AboutPage} from "./page/About";
 import {SetupPage} from "./page/Setup";
 import {Home} from "./page/Home";
+import Swiper, { Navigation } from 'swiper';
 // import {Footer} from "./part/Footer";
 
 export const APP = {}
@@ -54,3 +55,24 @@ try {
 } catch(e) {
   window.onload = initApp;
 }
+
+// initSlider(){
+  const swiperPartner = new Swiper('.swiper__partner', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    modules: [Navigation],
+    // breakpoints: {
+    //   790: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 24,
+    //   },
+    //   547: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 24,
+    //   }
+    // }
+  });
+// }

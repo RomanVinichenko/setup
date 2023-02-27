@@ -24,27 +24,6 @@
       line-height: 1.43;
       color: $white;
     }
-
-    ul {
-      display: flex;
-
-      li {
-        @include flex(center, center);
-
-        width: get-vw(48px);
-        height: get-vw(48px);
-        border: get-vw(1px) solid $gray-black;
-
-        &:not(:last-child) {
-          margin-right: get-vw(12px);
-        }
-
-        img {
-          width: get-vw(16px);
-          height: get-vw(16px);
-        }
-      }
-    }
   }
 
   &__pre {
@@ -81,55 +60,6 @@
   &__touch {
     margin-right: get-vw(45px);
     max-width: get-vw(384px);
-
-    ul {
-      li {
-        a {
-          position: relative;
-          padding-left: get-vw(40px);
-          color: $white;
-
-          &::before {
-            @include bg-contain;
-
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: get-vw(24px);
-            height: get-vw(24px);
-          }
-        }
-
-        &:not(:last-child) {
-          margin-bottom: get-vw(28px);
-        }
-
-        &:first-of-type {
-          a {
-            &::before {
-              background-image: url("/src/images/tel.svg");
-            }
-          }
-        }
-
-        &:nth-of-type(2) {
-          a {
-            &::before {
-              background-image: url("/src/images/mail.svg");
-            }
-          }
-        }
-
-        &:nth-of-type(3) {
-          a {
-            &::before {
-              background-image: url("/src/images/map.svg");
-            }
-          }
-        }
-      }
-    }
   }
 
   &__up {
@@ -206,6 +136,79 @@
       a {
         margin-left: get-vw(3px);
       }
+    }
+  }
+}
+
+.get-contact {
+  li {
+    a {
+      position: relative;
+      padding-left: get-vw(40px);
+      width: fit-content;
+      color: $white;
+
+      &::before {
+        @include bg-contain;
+
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: get-vw(24px);
+        height: get-vw(24px);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: get-vw(28px);
+    }
+
+    &:first-of-type {
+      a {
+        &::before {
+          background-image: url("/src/images/tel.svg");
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      a {
+        &::before {
+          background-image: url("/src/images/mail.svg");
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      a {
+        &::before {
+          background-image: url("/src/images/map.svg");
+        }
+      }
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+
+  li {
+    a {
+      @include flex(center, center);
+
+      width: get-vw(48px);
+      height: get-vw(48px);
+      border: get-vw(1px) solid $gray-black;
+
+      img {
+        width: get-vw(16px);
+        height: get-vw(16px);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: get-vw(12px);
     }
   }
 }
