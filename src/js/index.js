@@ -63,20 +63,10 @@ try {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    modules: [Navigation],
-    // breakpoints: {
-    //   790: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 24,
-    //   },
-    //   547: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 24,
-    //   }
-    // }
+    modules: [Navigation]
   });
 
-const swiperdashboard = new Swiper('.swiper__dashboard', {
+const swiperDashboard = new Swiper('.swiper__dashboard', {
   slidesPerView: 1,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -87,6 +77,19 @@ const swiperdashboard = new Swiper('.swiper__dashboard', {
     clickable: true
   },
   modules: [Navigation, Pagination]
+});
+
+const swiperKnowledge = new Swiper('.swiper__knowledge', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  modules: [Navigation]
   // breakpoints: {
   //   790: {
   //     slidesPerView: 3,
@@ -97,4 +100,17 @@ const swiperdashboard = new Swiper('.swiper__dashboard', {
   //     spaceBetween: 24,
   //   }
   // }
+});
+
+const swiperOtherProducts = new Swiper('.swiper__other-products', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  modules: [Navigation]
 });

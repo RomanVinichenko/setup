@@ -9,19 +9,19 @@
     margin-bottom: 0;
   }
 
-  h5 {
-    margin-bottom: get-vw(32px);
-
-    &:first-of-type {
-      margin-top: auto;
+  &__list {
+    .h5__400 {
+      color: $gray-dark;
     }
-  }
 
-  .h5__400 {
-    color: $gray-dark;
-  }
+    h5 {
+      margin-bottom: get-vw(32px);
 
-  ul {
+      &:first-of-type {
+        margin-top: auto;
+      }
+    }
+
     li {
       position: relative;
       min-height: get-vw(700px);

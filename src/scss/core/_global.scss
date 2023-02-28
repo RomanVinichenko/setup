@@ -296,7 +296,7 @@ h5 {
   margin: 0 auto;
   padding: get-vw(16px) get-vw(24px);
   width: fit-content;
-  box-shadow: 0 8px 20px rgba(32, 92, 52, 0.08);
+  box-shadow: 0 get-vw(8px) get-vw(20px) rgba(32, 92, 52, 0.08);
   color: $black;
   background-color: $white;
 
@@ -437,7 +437,7 @@ h5 {
     padding: get-vw(40px);
     width: get-vw(420px);
     height: fit-content;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 get-vw(4px) get-vw(16px) rgba(0, 0, 0, 0.12);
     background-color: $white;
 
     .img {
