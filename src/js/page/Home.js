@@ -7,7 +7,6 @@ export class Home {
         this.gigaFixedText()
     }
 
-
     horizontalSlide(){
         let section = this.page.querySelector(".scrollable_section")
         let mousePointer = section.querySelector(".scroll")
@@ -61,7 +60,6 @@ export class Home {
     //     }
     // }
     }
-
 
     // titleAni(){
     //     const Element = document.querySelector('.page-title-section');
@@ -183,8 +181,5 @@ export class Home {
                 },"-=0.4")
         })
 
-
     }
-
-
 }

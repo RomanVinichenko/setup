@@ -60,7 +60,6 @@ export class AboutPage{
         let close = popup.querySelector('.btn_close');
         let layer = popup.querySelector('.layer');
 
-
         this.ThankPopupTl.play();
         blockScroll()
         close.addEventListener('click', ()=>{
@@ -75,6 +74,4 @@ export class AboutPage{
             content.classList.remove('current')
         });
     }
-
-
 }
