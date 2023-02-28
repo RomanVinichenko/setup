@@ -396,4 +396,56 @@
 .review {
   padding: get-vw(140px) 0;
   background-color: $green-black;
+
+  blockquote {
+    @include fontSize(40px);
+
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: get-vw(72px);
+    max-width: get-vw(620px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: $white;
+
+    &::after {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__wrapper {
+    @include flex(center, space-between); }
+
+  &__ava {
+    margin-right: get-vw(24px);
+    width: get-vw(88px);
+    height: get-vw(88px);
+    border-radius: 50%;
+  }
+
+  &__info {
+    margin-left: get-vw(20px);
+  }
+
+  &__info-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: get-vw(40px);
+
+    h5 {
+      margin-bottom: get-vw(4px);
+      color: $white;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+
+  &__info-title {
+    margin-right: get-vw(32px);
+    max-width: get-vw(228px);
+  }
 }

@@ -189,30 +189,6 @@
     color: $white;
   }
 
-  blockquote {
-    @include fontSize(48px);
-
-    position: relative;
-    margin-bottom: get-vw(32px);
-    font-weight: 900;
-    line-height: 1.17;
-    letter-spacing: -0.03em;
-
-    &::after {
-      @include bg-contain;
-
-      content: "";
-      position: absolute;
-      left: 0;
-      top: get-vw(-72px);
-      width: get-vw(40px);
-      height: get-vw(40px);
-      font-size: 0;
-      line-height: 1;
-      background-image: url("/src/images/blockquote.svg");
-    }
-  }
-
   .btn {
     margin-top: get-vw(32px);
   }

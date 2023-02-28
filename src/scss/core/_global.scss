@@ -71,6 +71,23 @@ body {
     height: get-vw(24px);
   }
 
+  &.btn__social {
+    padding: 0;
+    width: get-vw(48px);
+    height: get-vw(48px);
+    border: get-vw(1px) solid $white;
+    background-color: transparent;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: get-vw(16px);
+      height: get-vw(16px);
+      transform: translate(-50%, -50%);
+    }
+  }
+
   &.btn__white {
     color: $gray-black;
     background-color: $white;
@@ -510,4 +527,32 @@ h5 {
 
 .ml-16 {
   margin-left: get-vw(16px);
+}
+
+.ml-8 {
+  margin-left: get-vw(8px);
+}
+
+blockquote {
+  @include fontSize(48px);
+
+  position: relative;
+  margin-bottom: get-vw(32px);
+  font-weight: 900;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+
+  &::after {
+    @include bg-contain;
+
+    content: "";
+    position: absolute;
+    left: 0;
+    top: get-vw(-72px);
+    width: get-vw(40px);
+    height: get-vw(40px);
+    font-size: 0;
+    line-height: 1;
+    background-image: url("/src/images/blockquote.svg");
+  }
 }
