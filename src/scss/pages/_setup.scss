@@ -484,6 +484,51 @@
   .swiper-button-next {
     right: 0;
   }
+
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: get-vw(40px);
+
+    span {
+      &:not(:last-child) {
+        margin-right: get-vw(14px);
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    display: block;
+    width: get-vw(16px);
+    height: get-vw(16px);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: get-vw(8px);
+      height: get-vw(8px);
+      border-radius: 50%;
+      background-color: $gray-medium;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $black;
+
+    &::after {
+      background-color: $white;
+    }
+  }
 }
 
 .app {
@@ -730,49 +775,4 @@
 .swiper-button-disabled {
   background-color: $gray-medium;
   cursor: not-allowed;
-}
-
-.swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: get-vw(40px);
-
-  span {
-    &:not(:last-child) {
-      margin-right: get-vw(14px);
-    }
-  }
-}
-
-.swiper-pagination-bullet {
-  position: relative;
-  display: block;
-  width: get-vw(16px);
-  height: get-vw(16px);
-  border-radius: 50%;
-  background-color: transparent;
-  transition: all 0.3s;
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: get-vw(8px);
-    height: get-vw(8px);
-    border-radius: 50%;
-    background-color: $gray-medium;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s;
-  }
-}
-
-.swiper-pagination-bullet-active {
-  background-color: $black;
-
-  &::after {
-    background-color: $white;
-  }
 }

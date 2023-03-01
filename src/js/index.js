@@ -85,10 +85,6 @@ const swiperKnowledge = new Swiper('.swiper__knowledge', {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
   modules: [Navigation]
   // breakpoints: {
   //   790: {
@@ -108,9 +104,19 @@ const swiperOtherProducts = new Swiper('.swiper__other-products', {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  modules: [Navigation]
+});
+
+const swiperMisa = new Swiper('.swiper__misa', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   pagination: {
     el: '.swiper-pagination',
-    clickable: true
+    clickable: true,
+    type: "fraction"
   },
-  modules: [Navigation]
+  modules: [Navigation, Pagination]
 });

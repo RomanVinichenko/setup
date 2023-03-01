@@ -60,7 +60,7 @@
 
 .map-big {
   height: get-vw(600px);
-  background-image: url("/src/images/map-big.jpeg");
+  background-image: url("/src/images/map-big.jpeg?as=webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@
 
 .potential {
   padding: get-vw(140px) 0 get-vw(162px);
-  background-image: url("/src/images/potential.jpeg");
+  background-image: url("/src/images/potential.jpeg?as=webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
