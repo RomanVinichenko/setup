@@ -11,7 +11,7 @@
     max-width: get-vw(384px);
     border-bottom: get-vw(1px) solid $gray-medium;
 
-    span {
+    .number {
       position: relative;
       margin-right: get-vw(24px);
 
@@ -37,25 +37,36 @@
     }
 
     li {
-      @include flex(center, flex-start);
-
-      padding: get-vw(16px) 0;
-      border-top: get-vw(1px) solid $gray-medium;
-      transition: all 0.3s;
-    }
-
-    .pillars--active {
-      padding-left: get-vw(24px);
-
-      span,
-      p {
-        color: $green;
+      display: block;
+      .tab_toggle{
+        @include flex(center, flex-start);
+        width: 100%;
+        padding: get-vw(16px) 0;
+        border-top: get-vw(1px) solid $gray-medium;
+        transition: all 0.3s;
+        &.pillars--active {
+          padding-left: get-vw(24px);
+          span {
+            color: $green;
+          }
+        }
       }
+
+
     }
+
   }
 
   &__wrapper {
     @include flex(flex-start, space-between);
+  }
+  .tab_item{
+    overflow: hidden;
+    height: 0;
+    &.pillars--active{
+      height: auto
+    }
+
   }
 
   &__content {

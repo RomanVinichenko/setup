@@ -17,7 +17,7 @@
 </div>
 <include src="./partials/header.html"></include>
 <include src="./partials/cookies.html"></include>
-<main class="main">
+<main class="main" id="setup">
   <section class="pre">
     <img src="./images/about.jpeg?as=webp" alt="Product">
     <div class="container">
@@ -30,46 +30,77 @@
       <div class="pillars__wrapper">
         <ul>
           <li>
-            <span>01</span>
-            <p>Market Entry Study</p>
+            <button class="tab_toggle pillars--active" data-toggle="1">
+              <span class="number">01</span>
+              <span class="text">Market Entry Study</span>
+            </button>
           </li>
           <li>
-            <span>01</span>
-            <p>Market Entry Study</p>
+            <button class="tab_toggle" data-toggle="2">
+              <span class="number">01</span>
+              <span class="text">Market Entry Study</span>
+            </button>
           </li>
           <li>
-            <span>01</span>
-            <p>Market Entry Study</p>
-          </li>
-          <li>
-            <span>01</span>
-            <p>Market Entry Study</p>
-          </li>
-          <li class="pillars--active">
-            <span>01</span>
-            <p>Market Entry Study</p>
-          </li>
-          <li>
-            <span>01</span>
-            <p>Market Entry Study</p>
-          </li>
-          <li>
-            <span>01</span>
-            <p>Market Entry Study</p>
+            <button class="tab_toggle " data-toggle="3">
+              <span class="number">01</span>
+              <span class="text">Market Entry Study</span>
+            </button>
           </li>
         </ul>
-        <div class="pillars__content">
-          <div class="pillars__img">
-            <img src="./images/pillars.jpeg?as=webp" alt="Pillars">
+        <div class="tab_content  fade-up" data-delay="600">
+          <div class="tab_item" data-tab="1">
+            <div class="pillars__content">
+              <div class="pillars__img">
+                <img src="./images/pillars.jpeg?as=webp" alt="Pillars">
+              </div>
+              <div class="formatted_content">
+                <p>
+                  1To hit the ground running, proper understanding of how things work here is critical to your success.
+                </p>
+                <p>
+                  Setup operates with a group of top tier consultants who have worked in local and international business
+                  environments and have a deep understanding of the local market. They will offer you proper orientation on
+                  key topics of relevance to your business.
+                </p>
+              </div>
+
+            </div>
           </div>
-          <p>
-            To hit the ground running, proper understanding of how things work here is critical to your success.
-          </p>
-          <p>
-            Setup operates with a group of top tier consultants who have worked in local and international business
-            environments and have a deep understanding of the local market. They will offer you proper orientation on
-            key topics of relevance to your business.
-          </p>
+          <div class="tab_item" data-tab="2">
+            <div class="pillars__content">
+              <div class="pillars__img">
+                <img src="./images/pillars.jpeg?as=webp" alt="Pillars">
+              </div>
+              <div class="formatted_content">
+                <p>
+                  2To hit the ground running, proper understanding of how things work here is critical to your success.
+                </p>
+                <p>
+                  Setup operates with a group of top tier consultants who have worked in local and international business
+                  environments and have a deep understanding of the local market. They will offer you proper orientation on
+                  key topics of relevance to your business.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab_item" data-tab="3">
+            <div class="pillars__content">
+              <div class="pillars__img">
+                <img src="./images/pillars.jpeg?as=webp" alt="Pillars">
+              </div>
+              <div class="formatted_content">
+                <p>
+                  3To hit the ground running, proper understanding of how things work here is critical to your success.
+                </p>
+                <p>
+                  Setup operates with a group of top tier consultants who have worked in local and international business
+                  environments and have a deep understanding of the local market. They will offer you proper orientation on
+                  key topics of relevance to your business.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

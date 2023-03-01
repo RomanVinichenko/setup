@@ -1,10 +1,9 @@
 export class Header {
     constructor() {
 
-        console.log('load')
+
         this.scrollPos = window.scrollY
         this.header = document.querySelector('.header');
-        console.log(this.header)
         this.scrollChange = 10
 
         this.addScrollEvent();
