@@ -47,6 +47,12 @@
         border-top: get-vw(1px) solid $gray-medium;
         transition: all 0.3s;
 
+        &:hover {
+          span {
+            color: $green;
+          }
+        }
+
         &.pillars--active {
           padding-left: get-vw(24px);
 
@@ -129,6 +135,11 @@
     .btn__white {
       border: get-vw(1px) solid $gray-medium;
       color: $gray-black;
+
+      &:hover {
+        border: get-vw(1px) solid $green;
+        color: $white;
+      }
     }
   }
 
@@ -409,6 +420,20 @@
     background-image: url("/src/images/review-pattern.svg");
     background-position: bottom right;
     background-size: cover;
+  }
+
+  .btn {
+    background-image: none;
+
+    &:hover {
+      p {
+        color: $black !important;
+      }
+
+      img {
+        filter: invert(0);
+      }
+    }
   }
 
   blockquote {
@@ -708,6 +733,7 @@
     border: get-vw(1px) solid rgba(0, 0, 0, 0.12);
     background-color: $white;
     transform: translate(-50%, -50%);
+    transition: all 0.3s;
 
     &::before {
       @include bg-contain;
@@ -721,6 +747,16 @@
       height: get-vw(24px);
       background-image: url("/src/images/play.svg");
       transform: translate(-50%, -50%);
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      border: get-vw(1px) solid transparent;
+      background-color: $green;
+
+      &::before {
+        filter: invert(1);
+      }
     }
   }
 }
@@ -783,6 +819,10 @@
   transition: all 0.3s;
   cursor: pointer;
 
+  &:hover {
+    background-color: $green;
+  }
+
   img {
     width: get-vw(24px);
     height: get-vw(24px);
@@ -792,4 +832,8 @@
 .swiper-button-disabled {
   background-color: $gray-medium;
   cursor: not-allowed;
+
+  &:hover {
+    background-color: $gray-medium;
+  }
 }

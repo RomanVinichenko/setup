@@ -103,6 +103,12 @@
       letter-spacing: 0.01em;
       color: $black;
     }
+
+    .btn__white {
+      &:hover {
+        border: get-vw(1px) solid $green;
+      }
+    }
   }
 }
 

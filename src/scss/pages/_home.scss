@@ -38,7 +38,7 @@
     max-width: 100%;
   }
 
-  p {
+  &__subtitle {
     @include fontSize(24px);
 
     margin-bottom: get-vw(32px);
@@ -199,6 +199,17 @@
 
   .btn {
     margin-top: get-vw(32px);
+    background-image: none;
+
+    &:hover {
+      p {
+        color: $black;
+      }
+
+      img {
+        filter: invert(0);
+      }
+    }
   }
 
   &__title {
@@ -701,7 +712,12 @@
     max-width: 38%;
 
     img:first-of-type {
+      max-width: get-vw(154px);
       object-fit: contain;
+    }
+
+    img:last-of-type {
+      max-width: get-vw(233px);
     }
   }
 

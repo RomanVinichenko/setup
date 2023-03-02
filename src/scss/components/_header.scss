@@ -62,7 +62,8 @@
   &__buttons {
     display: flex;
 
-    button:first-child {
+    button:first-child,
+    a:first-child {
       margin-right: get-vw(16px);
     }
   }

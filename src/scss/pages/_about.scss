@@ -62,18 +62,23 @@
     height: get-vw(40px);
     border: get-vw(1px) solid $gray-medium;
 
-    &::after {
-      @include bg-contain;
+    &:hover {
+      svg {
+        path {
+          fill: $green;
+        }
+      }
+    }
 
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
+    svg {
       width: get-vw(16px);
       height: get-vw(16px);
-      background-image: url("/src/images/linkedin.svg");
-      filter: invert(1);
-      transform: translate(-50%, -50%);
+      transition: all 0.3s;
+
+      path {
+        fill: $black;
+        transition: all 0.3s;
+      }
     }
   }
 }
@@ -139,7 +144,12 @@
   }
 
   .panel {
-    cursor: pointer;
+    &:hover {
+      button {
+        border: get-vw(1px) solid $green;
+        background-color: $green;
+      }
+    }
 
     &:last-child {
       .panel-collapse {
@@ -159,6 +169,12 @@
     }
 
     &.open {
+      &:hover {
+        button {
+          background-color: transparent;
+        }
+      }
+
       img {
         opacity: 1;
       }
@@ -168,6 +184,7 @@
   .panel-title {
     margin-left: auto;
     max-width: get-vw(486px);
+    cursor: pointer;
   }
 
   .item_title {

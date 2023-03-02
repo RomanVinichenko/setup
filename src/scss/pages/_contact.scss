@@ -38,6 +38,12 @@
   }
 
   .social-list {
+    svg {
+      path {
+        fill: $black;
+      }
+    }
+
     li {
       a {
         border: get-vw(1px) solid $gray-medium;
