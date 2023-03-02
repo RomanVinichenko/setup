@@ -16,7 +16,7 @@
 .menu {
   @include flex(center, space-between);
 
-  ul {
+  &__list {
     display: flex;
     margin-right: get-vw(40px);
     margin-left: auto;
@@ -117,7 +117,11 @@
   position: absolute;
   left: 50%;
   top: get-vw(100px);
-  padding: get-vw(40px) 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: get-vw(40px) 0;
+  width: 100%;
   border-top: get-vw(1px) solid $gray-medium;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
   background-color: $white;
@@ -125,12 +129,15 @@
 
   ul {
     display: flex;
-    margin: 0;
 
     li {
       position: relative;
-      padding-left: get-vw(64px);
-      max-width: get-vw(250px);
+      width: 100%;
+      max-width: get-vw(240px);
+
+      &:first-child {
+        max-width: fit-content;
+      }
 
       img {
         position: absolute;
@@ -140,8 +147,66 @@
         height: get-vw(40px);
       }
 
-      + li {
+      h6 {
+        @include fontSize(16px);
+
+        margin-bottom: get-vw(8px);
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: $black;
+      }
+
+      p {
+        @include fontSize(14px);
+
+        display: block;
+        margin-bottom: get-vw(12px);
+        width: fit-content;
+        line-height: 1.43;
+      }
+
+      a {
+        width: max-content;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: $black;
+
+        &:last-child {
+          position: relative;
+          padding-right: get-vw(20px);
+
+          &::after {
+            @include bg-contain;
+
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: get-vw(16px);
+            height: get-vw(16px);
+            font-size: 0;
+            line-height: 1;
+            background-image: url("/src/images/arrow-prod.svg");
+            transform: translateY(-50%);
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: get-vw(12px);
+        }
+      }
+
+      .products-drop__inactive {
+        color: $gray-medium;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:not(:first-child) {
         margin-left: get-vw(88px);
+        padding-left: get-vw(64px);
       }
     }
   }

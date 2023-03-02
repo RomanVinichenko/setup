@@ -120,3 +120,22 @@ const swiperMisa = new Swiper('.swiper__misa', {
   },
   modules: [Navigation, Pagination]
 });
+
+$(function () {
+  $('.link__service, .slime, .article__element, .expert__button, .footer__network')
+    .on('mouseenter', function (e) {
+      let parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+      $(this).find('span').css({top: relY, left: relX})
+    })
+    .on('mouseout', function (e) {
+      let parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+      $(this).find('span').css({top: relY, left: relX})
+    });
+  $('[href="#"]').click(function () {
+    return false;
+  });
+});

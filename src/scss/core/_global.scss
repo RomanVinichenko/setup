@@ -51,8 +51,15 @@ body {
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: $white;
+  background-image: url("/src/images/hover.svg");
+  background-position: 0 -100%;
+  background-repeat: repeat-x;
   background-color: $black;
   transition: all 0.3s;
+
+  &:hover {
+    background-position: 100% 50%;
+  }
 
   &:hover {
     .btn__text-box {
@@ -555,8 +562,4 @@ blockquote {
     line-height: 1;
     background-image: url("/src/images/blockquote.svg");
   }
-}
-
-.giga_section {
-  overflow: hidden;
 }

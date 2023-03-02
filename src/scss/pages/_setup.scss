@@ -8,7 +8,7 @@
   ul {
     margin-right: get-vw(30px);
     width: 100%;
-    max-width: get-vw(384px);
+    max-width: 30%;
     border-bottom: get-vw(1px) solid $gray-medium;
 
     .number {
@@ -38,40 +38,46 @@
 
     li {
       display: block;
-      .tab_toggle{
+
+      .tab_toggle {
         @include flex(center, flex-start);
-        width: 100%;
+
         padding: get-vw(16px) 0;
+        width: 100%;
         border-top: get-vw(1px) solid $gray-medium;
         transition: all 0.3s;
+
         &.pillars--active {
           padding-left: get-vw(24px);
+
           span {
             color: $green;
           }
         }
       }
-
-
     }
+  }
 
+  .tab_item {
+    height: 0;
+    overflow: hidden;
+
+    &.pillars--active {
+      height: auto;
+    }
   }
 
   &__wrapper {
     @include flex(flex-start, space-between);
-  }
-  .tab_item{
-    overflow: hidden;
-    height: 0;
-    &.pillars--active{
-      height: auto
-    }
 
+    .tab_content {
+      min-height: get-vw(400px);
+      max-width: 60%;
+    }
   }
 
   &__content {
     width: 100%;
-    max-width: get-vw(690px);
 
     p {
       color: $gray-black;
