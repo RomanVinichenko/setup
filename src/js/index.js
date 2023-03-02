@@ -8,6 +8,7 @@ import {AboutPage} from "./page/About";
 import {SetupPage} from "./page/Setup";
 import {Home} from "./page/Home";
 import Swiper, { Navigation, Pagination } from 'swiper';
+import {initAnimation} from "./utils";
 // import {Footer} from "./part/Footer";
 
 export const APP = {}
@@ -34,6 +35,7 @@ const initApp = () => {
 
   APP.Header = new Header()
   // APP.Footer = new Footer()
+  initAnimation()
 }
 
 window.addEventListener("resize", ()=>{
