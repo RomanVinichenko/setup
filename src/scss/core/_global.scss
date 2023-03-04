@@ -680,3 +680,113 @@ blockquote {
 .fade {
   opacity: 0;
 }
+.select-group{
+  .wpcf7-form-control-wrap select {
+    display: none;
+    padding: 0;
+    height: 0;
+  }
+  label {
+    pointer-events: none;
+    transform: translate(0px, -25px);
+  }
+  .form_select {
+    position: relative;
+    z-index: 3;
+    &.empty {
+      opacity: 0.6;
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+    }
+    .main_select {
+      button {
+        padding: 18px 16px;
+        @include flex(center, flex-start);
+        border: none;
+        border-bottom: 1px solid $gray_dark;
+        margin-bottom: 0;
+        background-color: $white;
+        width: 100%;
+
+        @media (min-width: 1920px) {
+          margin-bottom: get-vw(32px);
+        }
+        @media (max-width: 1280px) {
+          padding: 17px 16px;
+        }
+
+        .text {
+          max-width: calc(100% - 48px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          display: inline-block;
+          margin-right: 8px;
+
+        }
+        .arrow {
+          margin-left: auto;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          content: '';
+          background-image: url('/wp-content/themes/celerart/images/icon/arrow.svg');
+          background-size: cover;
+        }
+        &.open {
+          border-bottom: 1px solid $black;
+          .arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .drop_wrapper {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.16);
+      z-index: 2;
+      background-color: $white;
+    }
+    .main_drop {
+      width: calc(100% + 14px);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      .drop_list {
+        padding: 0 12px;
+        display: block;
+        .select-item {
+          color: $black;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #F6F6F6;
+          padding: 12px 0;
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+  }
+  &.open {
+    z-index: 10;
+  }
+  label {
+    z-index: 4;
+  }
+  .wpcf7-not-valid-tip {
+    margin-top: -22px;
+    margin-bottom: 10px;
+  }
+}

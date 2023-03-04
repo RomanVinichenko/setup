@@ -835,3 +835,48 @@
     }
   }
 }
+
+#videoPopup{
+  padding: 0;
+  .main-popup{
+    height: 100%;
+    width: 100%;
+    background: $black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0  ;
+    .popup-content{
+      width: 100%;
+    }
+    .btn_close{
+      position: absolute;
+      top: get-vw(16px);
+      right: get-vw(40px);
+    }
+  }
+}
+#contactPopup{
+  padding: 0;
+  align-items: center;
+  .main-popup{
+    width: get-vw(700px);
+    background: $white;
+    .popup-content{
+      width: 100%;
+      padding: get-vw(40px) get-vw(56px);
+      .h3{
+        margin-bottom: get-vw(24px);
+      }
+      .wpcf7{
+        margin-top: get-vw(48px);
+      }
+    }
+    .btn_close{
+      position: absolute;
+      top: 0;
+      right: 100%;
+    }
+  }
+}
