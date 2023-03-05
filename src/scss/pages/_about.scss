@@ -347,6 +347,20 @@
     grid-gap: 0 get-vw(24px);
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: get-vw(48px);
+    .outer_box{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      &:first-child {
+        position: relative;
+
+      }
+      &.active{
+        z-index: 3;
+      }
+
+    }
   }
 
   &__pic-big {

@@ -502,6 +502,28 @@ h5 {
     height: fit-content;
     box-shadow: 0 get-vw(4px) get-vw(16px) rgba(0, 0, 0, 0.12);
     background-color: $white;
+    .btn_close {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: get-vw(128px);
+      height: get-vw(128px);
+      border: get-vw(1px) solid rgba(0, 0, 0, 0.12);
+      background-color: $gray-black;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 100%;
+
+      &:hover {
+        background-color: $black;
+      }
+
+      svg {
+        width: 100%;
+      }
+    }
 
     .img {
       margin-bottom: get-vw(24px);
@@ -579,25 +601,7 @@ h5 {
     }
   }
 
-  .btn_close {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: get-vw(128px);
-    height: get-vw(128px);
-    border: get-vw(1px) solid rgba(0, 0, 0, 0.12);
-    background-color: $gray-black;
-    transition: all 0.3s;
-    cursor: pointer;
 
-    &:hover {
-      background-color: $black;
-    }
-
-    svg {
-      width: 100%;
-    }
-  }
 }
 
 .mr-10 {
@@ -738,7 +742,7 @@ blockquote {
           width: 16px;
           height: 16px;
           content: '';
-          background-image: url('/wp-content/themes/celerart/images/icon/arrow.svg');
+          //background-image: url('/wp-content/themes/celerart/images/icon/arrow.svg');
           background-size: cover;
         }
         &.open {
