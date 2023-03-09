@@ -1,7 +1,9 @@
 .pillars {
   padding: get-vw(140px) 0;
 
+  .h2,
   h2 {
+    margin-bottom: get-vw(64px);
     max-width: get-vw(588px);
   }
 
@@ -111,10 +113,12 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(64px);
     max-width: get-vw(690px);
@@ -205,6 +209,7 @@
       color: $gray-dark;
     }
 
+    .h3,
     h3 {
       max-width: get-vw(588px);
     }
@@ -240,10 +245,12 @@
     }
   }
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(15px);
   }
@@ -331,10 +338,12 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(64px);
   }
@@ -494,11 +503,13 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
     max-width: 60%;
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(64px);
     max-width: 60%;
@@ -578,15 +589,12 @@
   color: $white;
   background-color: $black;
 
-  h2,
-  h4 {
-    color: $white;
-  }
-
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(24px);
     max-width: get-vw(329px);
@@ -647,10 +655,12 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     max-width: get-vw(588px);
   }
@@ -764,8 +774,8 @@
 .other-products {
   padding: get-vw(140px) 0 0 0;
 
+  .h2,
   h2 {
-    //margin-bottom: 0;
     z-index: 10;
     margin-bottom: get-vw(-56px);
   }

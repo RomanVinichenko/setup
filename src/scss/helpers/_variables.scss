@@ -20,3 +20,125 @@ $green-black: #3a5a45;
 $vw-viewport: 1800;
 
 //$vw-viewport: 1440;
+
+.font_24 {
+  @include fontSize(24px);
+
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  span {
+    color: $green;
+  }
+}
+
+h5,
+.h5 {
+  @include fontSize(24px);
+
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+
+  &.h5__400 {
+    font-weight: 400;
+  }
+}
+
+.font_900 {
+  font-weight: 900;
+}
+
+.font_700 {
+  font-weight: 700;
+}
+
+.font_400 {
+  font-weight: 400;
+}
+
+.color_black {
+  color: $black;
+}
+
+.color_gray-black {
+  color: $gray-black;
+}
+
+.color_green {
+  color: $green;
+}
+
+.color_white {
+  color: $white;
+}
+
+.lh_112 {
+  line-height: 1.12;
+}
+
+.lh_117 {
+  line-height: 1.17;
+}
+
+.lh_143 {
+  line-height: 1.43;
+}
+
+.lh-120 {
+  line-height: 1.2;
+}
+
+.lh-125 {
+  line-height: 1.25;
+}
+
+.ls_001 {
+  letter-spacing: -0.01em;
+}
+
+.ls_002 {
+  letter-spacing: -0.02em;
+}
+
+.ls_003 {
+  letter-spacing: -0.03em;
+}
+
+.font_64 {
+  @include fontSize(64px);
+}
+
+.font_48 {
+  @include fontSize(48px);
+}
+
+.font_40 {
+  @include fontSize(40px);
+}
+
+.font_32 {
+  @include fontSize(32px);
+}
+
+.font_14 {
+  @include fontSize(14px);
+}
+
+.text-center {
+  text-align: center;
+}

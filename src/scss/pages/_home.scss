@@ -32,7 +32,7 @@
     bottom: get-vw(80px);
   }
 
-  h1 {
+  .h1 {
     margin-bottom: get-vw(16px);
     width: 100%;
     max-width: 100%;
@@ -87,14 +87,15 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(64px);
     max-width: 55%;
-    color: $gray-black;
   }
 
   ul {
@@ -105,14 +106,15 @@
   .scroll__item {
     display: flex !important;
     flex-direction: column;
-    //height: fit-content;
     min-height: get-vw(480px);
 
-    p {
-      margin-bottom: get-vw(24px);
+    .formatted_content {
+      p {
+        margin-bottom: get-vw(24px);
 
-      &:last-child {
-        margin-bottom: auto;
+        &:last-child {
+          margin-bottom: auto;
+        }
       }
     }
 
@@ -160,18 +162,18 @@
 }
 
 .scrollable_section {
-  height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 
   .horizontal_scroll {
     display: flex;
+    flex-grow: 1;
     flex-wrap: nowrap;
     align-items: stretch;
     justify-content: flex-start;
     margin-left: get-vw(-86px);
-    flex-grow: 1;
   }
 
   .scroll__item {
@@ -256,10 +258,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     transform: scale(1.1);
-
-    //img {
-    //  transform: scale(1.3);
-    //}
   }
 
   &__info {
@@ -275,10 +273,12 @@
 .people {
   padding: get-vw(140px) 0;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: auto;
     max-width: get-vw(486px);
@@ -334,13 +334,9 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
-  h2 {
-    margin-bottom: 0;
-  }
-
+  .h4,
   h4 {
     max-width: 88%;
-    color: $gray-black;
   }
 
   &__wrapper {
@@ -355,6 +351,7 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
@@ -362,10 +359,22 @@
   ul {
     li {
       position: relative;
+
+      &:hover {
+        .outer_box {
+          transform: rotateY(180deg);
+        }
+
+        .inner_box {
+          transform: rotateY(0);
+        }
+      }
+
       &:not(:last-child) {
         margin-bottom: get-vw(48px);
       }
-      .outer_box{
+
+      .outer_box {
         display: flex;
         justify-content: space-between;
         width: get-vw(792px);
@@ -375,31 +384,22 @@
         transform-style: preserve-3d;
         transition: ease-in-out 600ms;
       }
-      .inner_box{
-        padding: get-vw(40px);
+
+      .inner_box {
         position: absolute;
-        transform: rotateY(-180deg);
-        background-color: $white;
-        top: 0;
         left: 0;
+        top: 0;
+        padding: get-vw(40px);
         width: 100%;
         height: 100%;
+        background-color: $white;
         backface-visibility: hidden;
+        transform: rotateY(-180deg);
         transform-style: preserve-3d;
         transition: ease-in-out 600ms;
-        .formatted_content{
-          margin-top: get-vw(24px)
-        }
 
-
-
-      }
-      &:hover{
-        .outer_box{
-          transform: rotateY(180deg);
-        }
-        .inner_box{
-          transform: rotateY(0);
+        .formatted_content {
+          margin-top: get-vw(24px);
         }
       }
     }
@@ -414,9 +414,8 @@
     top: get-vw(200px);
     max-width: get-vw(305px);
 
+    .h4,
     h4 {
-      color: $gray-black;
-
       b {
         display: inline-block;
         font-weight: 700;
@@ -432,6 +431,7 @@
     justify-content: space-between;
     padding: get-vw(40px);
 
+    .h4,
     h4 {
       max-width: get-vw(328px);
     }
@@ -453,14 +453,9 @@
 .giga {
   padding: get-vw(140px) 0 0 0;
 
+  .h2,
   h2 {
-    margin-bottom: 0;
     max-width: get-vw(397px);
-  }
-
-  h3 {
-    margin-right: get-vw(12px);
-    color: $gray-black;
   }
 
   ul {
@@ -468,6 +463,7 @@
       position: relative;
       min-height: get-vw(900px);
 
+      .h2,
       h2 {
         margin-bottom: get-vw(8px);
       }
@@ -581,71 +577,16 @@
   }
 }
 
-.hacks {
-  position: relative;
-  height: get-vw(900px);
-  max-height: get-vw(900px);
-
-  h2 {
-    position: absolute;
-    top: get-vw(140px);
-    margin-bottom: 0;
-    max-width: get-vw(481px);
-    color: $white;
-  }
-
-  .container {
-    height: get-vw(900px);
-  }
-
-  .btn {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 5;
-    background-color: $white;
-  }
-
-  .btn__play {
-    border: get-vw(1px) solid rgba(0, 0, 0, 0.12) !important;
-  }
-
-  h4 {
-    position: absolute;
-    bottom: get-vw(87px);
-    color: $white;
-
-    &::after {
-      @include bg-contain;
-
-      content: "";
-      position: absolute;
-      right: -56%;
-      bottom: get-vw(8px);
-      width: get-vw(161px);
-      height: get-vw(32px);
-      background-image: url("/src/images/hacks-arrow.svg");
-    }
-  }
-
-  img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
 .line {
   position: relative;
   z-index: 6;
   height: get-vw(808px);
   max-height: get-vw(808px);
+
+  .h2,
+  h2 {
+    margin-bottom: get-vw(24px);
+  }
 
   .container {
     width: 100%;
@@ -676,11 +617,13 @@
 .misa {
   padding: get-vw(140px) 0;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
     max-width: 80%;
   }
 
+  .h4,
   h4 {
     padding-right: 10%;
   }
@@ -765,6 +708,7 @@
   &__swiper {
     max-width: 38%;
 
+    .h3,
     h3 {
       margin-bottom: get-vw(24px);
       padding-bottom: get-vw(24px);
@@ -818,6 +762,7 @@
     height: 100%;
     max-width: get-vw(497px);
 
+    .h2,
     h2,
     h5 {
       margin-bottom: get-vw(32px);
@@ -829,6 +774,7 @@
       max-width: get-vw(365px);
     }
 
+    .h2,
     h2 {
       margin-bottom: get-vw(24px);
       max-width: 80%;
@@ -836,47 +782,117 @@
   }
 }
 
-#videoPopup{
-  padding: 0;
-  .main-popup{
-    height: 100%;
+.hacks {
+  position: relative;
+  height: get-vw(900px);
+  max-height: get-vw(900px);
+
+  .h2,
+  h2 {
+    position: absolute;
+    top: get-vw(140px);
+    max-width: get-vw(481px);
+  }
+
+  .container {
+    height: get-vw(900px);
+  }
+
+  .btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+    background-color: $white;
+  }
+
+  .btn__play {
+    border: get-vw(1px) solid rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .h4,
+  h4 {
+    position: absolute;
+    bottom: get-vw(87px);
+    color: $white;
+
+    &::after {
+      @include bg-contain;
+
+      content: "";
+      position: absolute;
+      right: -56%;
+      bottom: get-vw(8px);
+      width: get-vw(161px);
+      height: get-vw(32px);
+      background-image: url("/src/images/hacks-arrow.svg");
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
     width: 100%;
-    background: $black;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+#videoPopup {
+  padding: 0;
+
+  .main-popup {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0  ;
-    .popup-content{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+
+    .popup-content {
       width: 100%;
     }
-    .btn_close{
+
+    .btn_close {
       position: absolute;
-      top: get-vw(16px);
       right: get-vw(40px);
+      top: get-vw(16px);
     }
   }
 }
-#contactPopup{
-  padding: 0;
+
+#contactPopup {
   align-items: center;
-  .main-popup{
+  padding: 0;
+
+  .main-popup {
     width: get-vw(700px);
     background: $white;
-    .popup-content{
-      width: 100%;
+
+    .popup-content {
       padding: get-vw(40px) get-vw(56px);
-      .h3{
+      width: 100%;
+
+      .h3,
+      h3 {
         margin-bottom: get-vw(24px);
       }
-      .wpcf7{
+
+      .wpcf7 {
         margin-top: get-vw(48px);
       }
     }
-    .btn_close{
+
+    .btn_close {
       position: absolute;
-      top: 0;
       right: 100%;
+      top: 0;
     }
   }
 }

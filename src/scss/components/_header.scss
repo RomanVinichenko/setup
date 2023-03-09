@@ -32,8 +32,8 @@
       color: $black;
     }
 
-    li {
-      + li {
+    div {
+      + div {
         margin-left: get-vw(40px);
       }
     }
@@ -72,7 +72,8 @@
 .lang-changer {
   position: absolute;
   left: 50%;
-  top: get-vw(50px);
+  top: get-vw(52px);
+  z-index: 6;
   display: flex;
   flex-direction: column;
   transform: translateX(-50%);

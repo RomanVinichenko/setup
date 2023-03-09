@@ -1,6 +1,7 @@
 .session {
   padding: get-vw(140px) 0;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(16px);
     max-width: get-vw(456px);
@@ -71,11 +72,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  .h4,
   h4 {
     margin-top: auto;
     margin-bottom: get-vw(32px);
     max-width: get-vw(422px);
-    color: $white;
   }
 
   .btn {
@@ -92,10 +93,12 @@
 .referral {
   padding: get-vw(140px) 0;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(48px);
   }
@@ -120,16 +123,25 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  .h2,
   h2 {
-    margin-bottom: 0;
     max-width: 52%;
-    color: $white;
   }
 }
 
 .career {
   padding: get-vw(140px) 0;
 
+  .font_24 {
+    max-width: 80%;
+  }
+
+  .h4,
+  h4 {
+    margin-bottom: get-vw(20px);
+  }
+
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }

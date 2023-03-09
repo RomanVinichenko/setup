@@ -2,6 +2,7 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h4,
   h4 {
     margin-bottom: get-vw(16px);
     max-width: 80%;
@@ -33,6 +34,7 @@
     }
   }
 
+  .h2,
   h2 {
     margin-bottom: get-vw(64px);
   }
@@ -47,11 +49,8 @@
     color: $black;
   }
 
-  p {
-    @include fontSize(14px);
-
+  .p {
     margin-bottom: get-vw(12px);
-    line-height: 1.43;
   }
 
   a {
@@ -103,12 +102,11 @@
     object-fit: cover;
   }
 
+  .h2,
   h2 {
     z-index: 5;
-    margin-bottom: 0;
     padding-top: get-vw(104px);
     max-width: get-vw(690px);
-    color: $white;
   }
 }
 
@@ -116,6 +114,7 @@
   padding: get-vw(140px) 0;
   background-color: $gray-light;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(64px);
   }
@@ -286,10 +285,12 @@
 .tradition {
   padding: get-vw(140px) 0;
 
+  .h2,
   h2 {
     margin-bottom: get-vw(32px);
   }
 
+  .h4,
   h4 {
     margin-bottom: get-vw(64px);
   }
@@ -343,23 +344,25 @@
   }
 
   &__pic {
+    position: relative;
     display: grid;
     grid-gap: 0 get-vw(24px);
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: get-vw(48px);
-    .outer_box{
+
+    .outer_box {
       position: absolute;
-      top: 0;
       left: 0;
+      top: 0;
       z-index: 1;
+
       &:first-child {
         position: relative;
-
       }
-      &.active{
+
+      &.active {
         z-index: 3;
       }
-
     }
   }
 

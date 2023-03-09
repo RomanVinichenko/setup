@@ -1,12 +1,8 @@
 .products {
   padding-top: get-vw(160px);
 
-  h1 {
+  .h1 {
     margin-bottom: get-vw(48px);
-  }
-
-  h2 {
-    margin-bottom: 0;
   }
 
   &__list {

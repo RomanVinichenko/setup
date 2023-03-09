@@ -76,12 +76,6 @@ body {
     transition: all 0.3s;
   }
 
-  span {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
   img {
     width: get-vw(24px);
     height: get-vw(24px);
@@ -201,79 +195,6 @@ body {
     p {
       transition: all 0.3s !important;
     }
-  }
-}
-
-.text__green {
-  display: inline-block;
-  color: $green;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $black;
-
-  span {
-    color: $green;
-  }
-}
-
-h1,
-h2 {
-  font-weight: 900;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  @include fontSize(64px);
-
-  line-height: 1.12;
-}
-
-h2 {
-  @include fontSize(48px);
-
-  margin-bottom: get-vw(64px);
-  line-height: 1.17;
-}
-
-h3,
-h4,
-h5 {
-  font-weight: 700;
-}
-
-h3 {
-  @include fontSize(40px);
-
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-}
-
-h4 {
-  @include fontSize(32px);
-
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-
-  &.h4__400 {
-    font-weight: 400;
-    letter-spacing: -0.01em;
-  }
-}
-
-h5 {
-  @include fontSize(24px);
-
-  line-height: 1.33;
-  letter-spacing: -0.01em;
-
-  &.h5__400 {
-    font-weight: 400;
   }
 }
 
@@ -466,10 +387,6 @@ h5 {
     right: 0;
     bottom: get-vw(56px);
   }
-
-  h1 {
-    color: $white;
-  }
 }
 
 .popup {
@@ -502,7 +419,11 @@ h5 {
     height: fit-content;
     box-shadow: 0 get-vw(4px) get-vw(16px) rgba(0, 0, 0, 0.12);
     background-color: $white;
+
     .btn_close {
+      position: absolute;
+      left: 100%;
+      top: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -512,9 +433,6 @@ h5 {
       background-color: $gray-black;
       transition: all 0.3s;
       cursor: pointer;
-      position: absolute;
-      top: 0;
-      left: 100%;
 
       &:hover {
         background-color: $black;
@@ -600,8 +518,6 @@ h5 {
       }
     }
   }
-
-
 }
 
 .mr-10 {
@@ -684,113 +600,131 @@ blockquote {
 .fade {
   opacity: 0;
 }
-.select-group{
+
+.select-group {
   .wpcf7-form-control-wrap select {
     display: none;
     padding: 0;
     height: 0;
   }
+
   label {
+    transform: translate(0, -25px);
     pointer-events: none;
-    transform: translate(0px, -25px);
   }
+
   .form_select {
     position: relative;
     z-index: 3;
-    &.empty {
-      opacity: 0.6;
-      &:before {
-        display: block;
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-      }
-    }
+
     .main_select {
       button {
-        padding: 18px 16px;
         @include flex(center, flex-start);
+
+        margin-bottom: 0;
+        padding: 18px 16px;
+        width: 100%;
         border: none;
         border-bottom: 1px solid $gray_dark;
-        margin-bottom: 0;
         background-color: $white;
-        width: 100%;
-
-        @media (min-width: 1920px) {
-          margin-bottom: get-vw(32px);
-        }
-        @media (max-width: 1280px) {
-          padding: 17px 16px;
-        }
 
         .text {
-          max-width: calc(100% - 48px);
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
           display: inline-block;
           margin-right: 8px;
-
+          max-width: calc(100% - 48px);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
+
         .arrow {
-          margin-left: auto;
+          content: "";
           display: inline-block;
+          margin-left: auto;
           width: 16px;
           height: 16px;
-          content: '';
+
           //background-image: url('/wp-content/themes/celerart/images/icon/arrow.svg');
           background-size: cover;
         }
+
         &.open {
           border-bottom: 1px solid $black;
+
           .arrow {
             transform: rotate(180deg);
           }
         }
+
+        @media (min-width: 1920px) {
+          margin-bottom: get-vw(32px);
+        }
+
+        @media (max-width: 1280px) {
+          padding: 17px 16px;
+        }
       }
     }
+
     .drop_wrapper {
       position: absolute;
-      top: calc(100% + 8px);
       left: 0;
+      top: calc(100% + 8px);
+      z-index: 2;
       width: 100%;
       overflow: hidden;
       box-shadow: 0 0 24px rgba(0, 0, 0, 0.16);
-      z-index: 2;
       background-color: $white;
     }
+
     .main_drop {
       width: calc(100% + 14px);
       overflow-x: hidden;
       overflow-y: scroll;
+
       .drop_list {
-        padding: 0 12px;
         display: block;
+        padding: 0 12px;
+
         .select-item {
+          display: block;
+          padding: 12px 0;
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #f6f6f6;
+          text-align: left;
           color: $black;
           background-color: transparent;
-          border: none;
-          border-bottom: 1px solid #F6F6F6;
-          padding: 12px 0;
-          display: block;
-          width: 100%;
-          text-align: left;
         }
       }
     }
+
+    &.empty {
+      opacity: 0.6;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
-  &.open {
-    z-index: 10;
-  }
+
   label {
     z-index: 4;
   }
+
   .wpcf7-not-valid-tip {
     margin-top: -22px;
     margin-bottom: 10px;
+  }
+
+  &.open {
+    z-index: 10;
   }
 }
