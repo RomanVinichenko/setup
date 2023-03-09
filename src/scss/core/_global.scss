@@ -70,12 +70,9 @@ section {
   }
 
   img {
-    transition: all 0.3s;
-  }
-
-  img {
     width: get-vw(24px);
     height: get-vw(24px);
+    transition: all 0.3s;
   }
 
   &.btn__social {
@@ -353,6 +350,7 @@ section {
 .pre {
   position: relative;
   z-index: 5;
+  padding: 0;
   height: get-vw(500px);
   max-height: get-vw(500px);
 
@@ -377,6 +375,15 @@ section {
     height: get-vw(356px);
     background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0) 100%);
     transform: rotate(180deg);
+  }
+
+  h1 {
+    @include fontSize(64px);
+
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: $white;
   }
 
   img {
@@ -613,6 +620,7 @@ blockquote {
   }
 
   label {
+    z-index: 4;
     transform: translate(0, -25px);
     pointer-events: none;
   }
@@ -647,8 +655,6 @@ blockquote {
           margin-left: auto;
           width: 16px;
           height: 16px;
-
-          //background-image: url('/wp-content/themes/celerart/images/icon/arrow.svg');
           background-size: cover;
         }
 
@@ -719,10 +725,6 @@ blockquote {
     }
   }
 
-  label {
-    z-index: 4;
-  }
-
   .wpcf7-not-valid-tip {
     margin-top: -22px;
     margin-bottom: 10px;
@@ -730,18 +732,5 @@ blockquote {
 
   &.open {
     z-index: 10;
-  }
-}
-
-.pre {
-  padding: 0;
-
-  h1 {
-    @include fontSize(64px);
-
-    font-weight: 900;
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    color: $white;
   }
 }
