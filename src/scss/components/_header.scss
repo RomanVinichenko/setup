@@ -16,10 +16,21 @@
 .menu {
   @include flex(center, space-between);
 
-  &__list {
+  &__nav {
     display: flex;
     margin-right: get-vw(40px);
     margin-left: auto;
+
+    ul {
+      display: flex;
+      margin: 0 get-vw(40px);
+
+      li {
+        &:not(:last-child) {
+          margin-right: get-vw(40px);
+        }
+      }
+    }
 
     a {
       @include fontSize(14px);
@@ -30,12 +41,6 @@
       letter-spacing: -0.01em;
       text-transform: uppercase;
       color: $black;
-    }
-
-    div {
-      + div {
-        margin-left: get-vw(40px);
-      }
     }
   }
 

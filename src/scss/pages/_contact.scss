@@ -1,29 +1,12 @@
 .session {
-  padding: get-vw(140px) 0;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(16px);
-    max-width: get-vw(456px);
+  h2,
+  .h2 {
+    max-width: 60%;
   }
 
-  h5 {
-    margin-bottom: get-vw(40px);
-    max-width: get-vw(355px);
-    color: $gray-dark;
-  }
-
-  h6 {
-    @include fontSize(14px);
-
-    margin-bottom: get-vw(16px);
-    font-weight: 400;
-    line-height: 1.43;
-    color: $gray-dark;
-
-    &:not(:last-child) {
-      margin-top: get-vw(40px);
-    }
+  h5,
+  .h5 {
+    max-width: 50%;
   }
 
   .get-contact {
@@ -61,11 +44,12 @@
   }
 
   &__main {
-    max-width: get-vw(486px);
+    max-width: 50%;
   }
 }
 
 .map-big {
+  padding: 0;
   height: get-vw(600px);
   background-image: url("/src/images/map-big.jpeg?as=webp");
   background-position: center;
@@ -75,8 +59,21 @@
   .h4,
   h4 {
     margin-top: auto;
-    margin-bottom: get-vw(32px);
     max-width: get-vw(422px);
+  }
+
+  .btn__white {
+    border: none;
+
+    &:hover {
+      span {
+        color: $white;
+      }
+    }
+
+    span {
+      color: $black;
+    }
   }
 
   .btn {
@@ -91,22 +88,6 @@
 }
 
 .referral {
-  padding: get-vw(140px) 0;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
-
-  .h4,
-  h4 {
-    margin-bottom: get-vw(48px);
-  }
-
-  h5 {
-    color: $green;
-  }
-
   &__wrapper {
     @include flex(flex-start, space-between);
   }
@@ -130,22 +111,6 @@
 }
 
 .career {
-  padding: get-vw(140px) 0;
-
-  .font_24 {
-    max-width: 80%;
-  }
-
-  .h4,
-  h4 {
-    margin-bottom: get-vw(20px);
-  }
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
-
   &__wrapper {
     @include flex(flex-start, space-between);
   }
@@ -153,5 +118,10 @@
   &__main {
     width: 100%;
     max-width: 50%;
+
+    .h5,
+    h5 {
+      max-width: get-vw(486px);
+    }
   }
 }

@@ -2,7 +2,6 @@
   padding: get-vw(160px) 0 get-vw(120px);
 
   .h1 {
-    margin-bottom: get-vw(48px);
     padding-bottom: get-vw(48px);
     border-bottom: get-vw(1px) solid $gray-medium;
   }
@@ -13,36 +12,32 @@
 }
 
 .terms {
-  .btn {
-    margin: get-vw(16px) 0;
-  }
-
   .btn__white {
     border: get-vw(1px) solid $gray-medium;
-    color: $black;
-  }
 
-  &__main {
-    max-width: get-vw(792px);
+    &:hover {
+      border: get-vw(1px) solid $green;
 
-    h5 {
-      margin-bottom: get-vw(16px);
-
-      &:not(:first-child) {
-        margin-top: get-vw(48px);
+      span {
+        color: $white;
       }
     }
 
-    h6 {
-      @include fontSize(20px);
-
-      margin-top: get-vw(48px);
-      margin-bottom: get-vw(16px);
-      font-weight: 600;
-      line-height: 1.4;
-      letter-spacing: -0.02em;
+    span {
       color: $black;
     }
+  }
+
+  &__nav {
+    .btn__white {
+      &:hover {
+
+      }
+    }
+  }
+
+  &__main {
+    max-width: 55%;
 
     p {
       margin-bottom: get-vw(24px);
@@ -88,32 +83,15 @@
       }
     }
   }
-
-  &__nav {
-    p {
-      @include fontSize(14px);
-
-      line-height: 1.43;
-    }
-
-    span {
-      display: inline-block;
-      margin: get-vw(4px) 0 get-vw(40px);
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      color: $black;
-    }
-
-    .btn__white {
-      &:hover {
-        border: get-vw(1px) solid $green;
-      }
-    }
-  }
 }
 
 .thank {
-  padding: get-vw(160px) 0 get-vw(58px);
+  padding-bottom: get-vw(58px);
+
+  .h5,
+  h5 {
+    max-width: 40%;
+  }
 
   .general-page__img {
     img {
@@ -123,24 +101,21 @@
   }
 }
 
-.thank,
 .error {
-  h5 {
-    margin-bottom: get-vw(32px);
-    max-width: get-vw(384px);
-  }
-}
-
-.error {
-  padding: get-vw(160px) 0 get-vw(75px);
+  padding-bottom: get-vw(75px);
 
   .general-page__text {
     margin-right: get-vw(24px);
+    max-width: 28%;
   }
 
   &__message {
     position: relative;
+    display: flex;
+    justify-content: center;
     padding: 0;
+    width: 100%;
+    text-align: center;
 
     &::after,
     &::before {
@@ -167,8 +142,7 @@
     p {
       @include fontSize(450px);
 
-      position: relative;
-      padding: get-vw(96px) get-vw(60px) 0 get-vw(42px);
+      padding: get-vw(96px) 0 0 0;
       font-weight: 500;
       line-height: 1;
       letter-spacing: -0.06em;

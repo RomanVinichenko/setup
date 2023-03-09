@@ -9,6 +9,7 @@ body {
   line-height: 1.5;
   color: $gray-dark;
   background-color: $white;
+  transition: all 0.3s;
   cursor: default;
 }
 
@@ -18,23 +19,19 @@ body {
   padding: 0 get-vw(40px);
   width: 100%;
 
-  @media (max-width: 1800px) {
-    padding: 0 40px;
-  }
-}
-
-.container {
-  max-width: 1264px;
-
   @media (min-width: 1800px) {
-    max-width: get-vw(1440px);
+    max-width: get-vw(1520px);
   }
 }
 
 .container-header {
   @media (min-width: 1800px) {
-    max-width: get-vw(1440px);
+    max-width: get-vw(1660px);
   }
+}
+
+section {
+  padding: get-vw(140px) 0;
 }
 
 .btn {
@@ -58,7 +55,7 @@ body {
   background-position: 0 -100%;
   background-repeat: repeat-x;
   background-color: $black;
-  transition: all 0.5s;
+  transition: background-position 0.3s;
 
   &:hover {
     background-position: 100% 50%;
@@ -192,8 +189,15 @@ body {
     display: flex;
     transition: all 0.3s;
 
+    span {
+      width: 100%;
+      min-width: max-content;
+      max-width: max-content;
+      transition: all 0.3s;
+    }
+
     p {
-      transition: all 0.3s !important;
+      transition: all 0.3s;
     }
   }
 }
@@ -726,5 +730,18 @@ blockquote {
 
   &.open {
     z-index: 10;
+  }
+}
+
+.pre {
+  padding: 0;
+
+  h1 {
+    @include fontSize(64px);
+
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: $white;
   }
 }

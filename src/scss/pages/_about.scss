@@ -1,10 +1,8 @@
 .value {
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
 
   .h4,
   h4 {
-    margin-bottom: get-vw(16px);
     max-width: 80%;
   }
 
@@ -16,8 +14,6 @@
 }
 
 .team {
-  padding: get-vw(140px) 0;
-
   ul {
     display: grid;
     grid-gap: get-vw(24px);
@@ -31,22 +27,11 @@
         right: get-vw(9px);
         top: get-vw(9px);
       }
+
+      img {
+        margin-bottom: get-vw(16px);
+      }
     }
-  }
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(64px);
-  }
-
-  h6 {
-    @include fontSize(16px);
-
-    margin: get-vw(16px) 0 get-vw(4px);
-    font-weight: 700;
-    line-height: 1.5;
-    letter-spacing: 0.01em;
-    color: $black;
   }
 
   .p {
@@ -84,6 +69,7 @@
 
 .expect {
   position: relative;
+  padding: 0;
   height: get-vw(810px);
 
   .container {
@@ -111,13 +97,7 @@
 }
 
 .benefits {
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(64px);
-  }
 
   .panel-group {
     position: relative;
@@ -283,18 +263,6 @@
 }
 
 .tradition {
-  padding: get-vw(140px) 0;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
-
-  .h4,
-  h4 {
-    margin-bottom: get-vw(64px);
-  }
-
   ul {
     display: grid;
     grid-gap: 0 get-vw(24px);
@@ -310,14 +278,10 @@
       opacity: 1;
     }
 
-    h6 {
-      @include fontSize(20px);
-
+    h6,
+    .h6 {
       position: relative;
-      margin-bottom: get-vw(24px);
-      padding-bottom: get-vw(24px);
-      font-weight: 700;
-      line-height: 1.4;
+      padding-bottom: get-vw(20px);
 
       &::after {
         content: "";
@@ -330,17 +294,6 @@
         background-color: $gray-medium;
       }
     }
-
-    b {
-      display: block;
-      margin-bottom: get-vw(24px);
-      letter-spacing: 0.01em;
-      color: $black;
-    }
-
-    p {
-      color: $black;
-    }
   }
 
   &__pic {
@@ -351,7 +304,7 @@
     margin-bottom: get-vw(48px);
 
     .outer_box {
-      position: absolute;
+      position: relative;
       left: 0;
       top: 0;
       z-index: 1;

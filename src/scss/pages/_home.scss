@@ -39,13 +39,9 @@
   }
 
   &__subtitle {
-    @include fontSize(24px);
-
     margin-bottom: get-vw(32px);
     height: 100%;
     max-width: 62%;
-    line-height: 1.33;
-    letter-spacing: -0.01em;
   }
 
   &__video {
@@ -284,14 +280,6 @@
     max-width: get-vw(486px);
   }
 
-  h5 {
-    color: $gray-dark;
-
-    &:not(:last-child) {
-      margin-bottom: get-vw(32px);
-    }
-  }
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -350,11 +338,6 @@
 .vision {
   padding: get-vw(140px) 0;
   background-color: $gray-light;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
 
   ul {
     li {
@@ -582,11 +565,6 @@
   z-index: 6;
   height: get-vw(808px);
   max-height: get-vw(808px);
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(24px);
-  }
 
   .container {
     width: 100%;
