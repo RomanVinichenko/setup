@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  padding: 0;
 
   &::before {
     @include bg-contain;
@@ -33,7 +34,6 @@
   }
 
   .h1 {
-    margin-bottom: get-vw(16px);
     width: 100%;
     max-width: 100%;
   }
@@ -80,17 +80,10 @@
 
 .why {
   position: relative;
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
 
   .h4,
   h4 {
-    margin-bottom: get-vw(64px);
     max-width: 55%;
   }
 
@@ -188,15 +181,12 @@
   @include bg-contain;
 
   position: relative;
+  padding: 0;
   overflow: hidden;
   color: $white;
   background-image: url("/src/images/decor-shake.svg");
   background-position: bottom right;
   background-color: $green-black;
-
-  h5 {
-    color: $white;
-  }
 
   .btn {
     margin-top: get-vw(32px);
@@ -228,10 +218,20 @@
       height: get-vw(48px);
       border: get-vw(1px) solid $white;
       background-color: transparent;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #fff;
+
+        img {
+          filter: invert(1);
+        }
+      }
 
       img {
         width: get-vw(16px);
         height: get-vw(16px);
+        transition: filter 0.3s;
       }
     }
   }
@@ -259,21 +259,10 @@
   &__info {
     width: 100%;
     max-width: 47%;
-
-    h5 {
-      margin-bottom: get-vw(4px);
-    }
   }
 }
 
 .people {
-  padding: get-vw(140px) 0;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
-
   .h4,
   h4 {
     margin-bottom: auto;
@@ -319,12 +308,11 @@
 
 .commitment {
   position: relative;
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
 
   .h4,
   h4 {
-    max-width: 88%;
+    max-width: 85%;
   }
 
   &__wrapper {
@@ -336,7 +324,6 @@
 }
 
 .vision {
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
 
   ul {
@@ -381,6 +368,10 @@
         transform-style: preserve-3d;
         transition: ease-in-out 600ms;
 
+        p {
+          margin-bottom: get-vw(24px);
+        }
+
         .formatted_content {
           margin-top: get-vw(24px);
         }
@@ -396,16 +387,6 @@
     position: sticky;
     top: get-vw(200px);
     max-width: get-vw(305px);
-
-    .h4,
-    h4 {
-      b {
-        display: inline-block;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        color: $black;
-      }
-    }
   }
 
   &__box-info {
@@ -566,6 +547,15 @@
   height: get-vw(808px);
   max-height: get-vw(808px);
 
+  h2,
+  .h2 {
+
+  }
+
+  .triangles__info {
+    max-width: get-vw(400px);
+  }
+
   .container {
     width: 100%;
     height: get-vw(792px);
@@ -593,12 +583,9 @@
 }
 
 .misa {
-  padding: get-vw(140px) 0;
-
   .h2,
   h2 {
-    margin-bottom: get-vw(32px);
-    max-width: 80%;
+    max-width: 70%;
   }
 
   .h4,
@@ -693,18 +680,18 @@
       border-bottom: get-vw(1px) solid $gray-medium;
     }
 
+    .h6,
     h6 {
       @include fontSize(20px);
 
-      font-weight: 400;
       line-height: 1.4;
-      color: $gray-dark;
     }
   }
 }
 
 .triangles {
   position: relative;
+  padding: 0;
 
   &::before,
   &::after {
@@ -731,6 +718,22 @@
     background-image: url("/src/images/line-pattern2.svg");
   }
 
+  .btn__white {
+    &:hover {
+      .btn__text-box {
+        span {
+          color: $white;
+        }
+      }
+    }
+
+    .btn__text-box {
+      span {
+        transition: color 0.3s;
+      }
+    }
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -739,29 +742,12 @@
     margin: auto;
     height: 100%;
     max-width: get-vw(497px);
-
-    .h2,
-    h2,
-    h5 {
-      margin-bottom: get-vw(32px);
-      text-align: center;
-      color: $white;
-    }
-
-    h5 {
-      max-width: get-vw(365px);
-    }
-
-    .h2,
-    h2 {
-      margin-bottom: get-vw(24px);
-      max-width: 80%;
-    }
   }
 }
 
 .hacks {
   position: relative;
+  padding: 0;
   height: get-vw(900px);
   max-height: get-vw(900px);
 
@@ -782,6 +768,7 @@
     top: 50%;
     z-index: 5;
     background-color: $white;
+    transform: translate(-50%, -50%);
   }
 
   .btn__play {
@@ -792,14 +779,13 @@
   h4 {
     position: absolute;
     bottom: get-vw(87px);
-    color: $white;
 
     &::after {
       @include bg-contain;
 
       content: "";
       position: absolute;
-      right: -56%;
+      right: -76%;
       bottom: get-vw(8px);
       width: get-vw(161px);
       height: get-vw(32px);

@@ -50,10 +50,6 @@ h6,
   font-weight: 600;
 }
 
-.font_400 {
-  font-weight: 400;
-}
-
 .color_black {
   color: $black;
 }
@@ -67,10 +63,6 @@ h6,
 }
 
 .color_white {
-  color: $white;
-}
-
-.color_grey-dark {
   color: $white;
 }
 
@@ -192,6 +184,10 @@ h6,
 
 .mb-16 {
   margin-bottom: get-vw(16px);
+}
+
+.mb-8 {
+  margin-bottom: get-vw(8px);
 }
 
 .mb-4 {
