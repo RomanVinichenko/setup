@@ -1,9 +1,6 @@
 .pillars {
-  padding: get-vw(140px) 0;
-
   .h2,
   h2 {
-    margin-bottom: get-vw(64px);
     max-width: get-vw(588px);
   }
 
@@ -110,17 +107,10 @@
 }
 
 .partner {
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
 
   .h4,
   h4 {
-    margin-bottom: get-vw(64px);
     max-width: get-vw(690px);
   }
 
@@ -152,6 +142,7 @@
       display: grid;
       grid-gap: get-vw(24px);
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 0 get-vw(1px);
 
       li {
         @include flex(center, center);
@@ -169,7 +160,7 @@
           max-width: get-vw(104px);
         }
 
-        h6 {
+        p:first-of-type {
           @include fontSize(14px);
 
           margin-bottom: get-vw(6px);
@@ -179,7 +170,7 @@
           color: $black;
         }
 
-        p {
+        p:last-of-type {
           @include fontSize(12px);
 
           max-width: get-vw(180px);
@@ -204,11 +195,6 @@
   &__info {
     @include flex(flex-start, space-between);
 
-    h5 {
-      margin-bottom: get-vw(40px);
-      color: $gray-dark;
-    }
-
     .h3,
     h3 {
       max-width: get-vw(588px);
@@ -221,8 +207,6 @@
 }
 
 .other {
-  padding: get-vw(140px) 0;
-
   ul {
     li {
       &:first-child {
@@ -245,18 +229,8 @@
     }
   }
 
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
-
-  .h4,
-  h4 {
-    margin-bottom: get-vw(15px);
-  }
-
+  .h5,
   h5 {
-    margin-bottom: get-vw(64px);
     max-width: get-vw(690px);
   }
 
@@ -289,12 +263,13 @@
     li:first-child {
       border-left: none !important;
 
+      .h6,
       h6 {
         @include fontSize(20px);
 
-        font-weight: 700;
+        padding: 0;
         line-height: 1.4;
-        color: $black;
+        letter-spacing: 0;
       }
 
       img {
@@ -335,17 +310,11 @@
 }
 
 .ideal {
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
 
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
-
-  .h4,
-  h4 {
-    margin-bottom: get-vw(64px);
+  h4,
+  .h4 {
+    max-width: 80%;
   }
 
   &__wrapper {
@@ -363,7 +332,7 @@
   }
 
   &__text {
-    max-width: get-vw(486px);
+    max-width: 40%;
 
     p {
       margin-bottom: get-vw(12px);
@@ -414,7 +383,6 @@
 .review {
   position: relative;
   z-index: 5;
-  padding: get-vw(140px) 0;
   background-color: $green-black;
 
   &::before {
@@ -442,6 +410,22 @@
       img {
         filter: invert(0);
       }
+    }
+  }
+
+  .btn__social {
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $white;
+
+      img {
+        filter: invert(1);
+      }
+    }
+
+    img {
+      transition: filter 0.3s;
     }
   }
 
@@ -483,11 +467,6 @@
     align-items: center;
     margin-bottom: get-vw(40px);
 
-    h5 {
-      margin-bottom: get-vw(4px);
-      color: $white;
-    }
-
     p {
       color: $white;
     }
@@ -500,18 +479,15 @@
 }
 
 .dashboard {
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
 
   .h2,
   h2 {
-    margin-bottom: get-vw(32px);
     max-width: 60%;
   }
 
   .h4,
   h4 {
-    margin-bottom: get-vw(64px);
     max-width: 60%;
   }
 
@@ -585,18 +561,11 @@
 }
 
 .app {
-  padding: get-vw(140px) 0;
   color: $white;
   background-color: $black;
 
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
-
   .h4,
   h4 {
-    margin-bottom: get-vw(24px);
     max-width: get-vw(329px);
   }
 
@@ -652,13 +621,7 @@
 }
 
 .knowledge {
-  padding: get-vw(140px) 0;
   background-color: $gray-light;
-
-  .h2,
-  h2 {
-    margin-bottom: get-vw(32px);
-  }
 
   .h4,
   h4 {
@@ -669,6 +632,7 @@
     display: grid;
     grid-gap: get-vw(40px) get-vw(24px);
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 get-vw(1px);
 
     li {
       span {
@@ -679,6 +643,7 @@
         line-height: 1.43;
       }
 
+      .h6,
       h6 {
         @include fontSize(20px);
 
@@ -777,13 +742,11 @@
   .h2,
   h2 {
     z-index: 10;
-    margin-bottom: get-vw(-56px);
+    margin-bottom: auto;
   }
 
   .swiper {
     position: relative;
-
-    //margin-top: get-vw(64px);
     padding-top: 0;
   }
 
@@ -811,8 +774,6 @@
 
     &.container {
       margin-bottom: get-vw(64px);
-
-      //margin-top: get-vw(-50px);
     }
   }
 }
@@ -826,7 +787,7 @@
   width: get-vw(56px);
   height: get-vw(56px);
   background-color: $black;
-  transition: all 0.3s;
+  transition: background-color 0.3s;
   cursor: pointer;
 
   &:hover {
