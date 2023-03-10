@@ -41,6 +41,11 @@
       letter-spacing: -0.01em;
       text-transform: uppercase;
       color: $black;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $green;
+      }
     }
   }
 

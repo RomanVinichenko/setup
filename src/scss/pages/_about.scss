@@ -45,8 +45,11 @@
     width: get-vw(40px);
     height: get-vw(40px);
     border: get-vw(1px) solid $gray-medium;
+    transition: border 0.3s;
 
     &:hover {
+      border: get-vw(1px) solid $green;
+
       svg {
         path {
           fill: $green;
@@ -298,16 +301,17 @@
 
   &__pic {
     position: relative;
-    display: grid;
-    grid-gap: 0 get-vw(24px);
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: get-vw(48px);
 
     .outer_box {
-      position: relative;
+      position: absolute;
       left: 0;
       top: 0;
       z-index: 1;
+      display: grid;
+      grid-gap: 0 get-vw(24px);
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: get-vw(48px);
+      width: 100%;
 
       &:first-child {
         position: relative;
