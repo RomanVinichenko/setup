@@ -9,7 +9,6 @@ body {
   line-height: 1.5;
   color: $gray-dark;
   background-color: $white;
-  transition: all 0.3s;
   cursor: default;
 }
 
@@ -556,7 +555,7 @@ section {
         &::before {
           background-image: url("/src/images/linkedin.svg");
           filter: invert(1);
-          transition: all 0.3s;
+          transition: filter 0.3s;
         }
       }
     }

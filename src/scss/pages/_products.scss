@@ -1,19 +1,12 @@
 .products {
-  padding-top: get-vw(160px);
+  padding: get-vw(160px) 0 0 0;
 
-  .h1 {
-    margin-bottom: get-vw(48px);
+  h2,
+  .h2 {
+    margin-bottom: auto;
   }
 
   &__list {
-    h5 {
-      margin-bottom: get-vw(32px);
-
-      &:first-of-type {
-        margin-top: auto;
-      }
-    }
-
     li {
       position: relative;
       min-height: get-vw(700px);
