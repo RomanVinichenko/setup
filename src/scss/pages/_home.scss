@@ -529,9 +529,7 @@
     margin-top: auto;
 
     p {
-      @include fontSize(20px);
-
-      line-height: 1.4;
+      @include font_20;
       color: $black;
 
       &:not(:last-child) {
@@ -608,7 +606,7 @@
   }
 
   .swiper-pagination {
-    @include fontSize(16px);
+    @include font_16;
 
     position: absolute;
     left: 0;
@@ -616,8 +614,6 @@
     display: flex;
     align-items: flex-end;
     height: get-vw(48px);
-    font-weight: 400;
-    line-height: 1.5;
     color: $black;
   }
 
@@ -633,11 +629,9 @@
   }
 
   .swiper-pagination-total {
-    @include fontSize(16px);
+    @include font_16;
 
     margin-left: get-vw(12px);
-    font-weight: 400;
-    line-height: 1.5;
     color: $gray-dark;
   }
 
@@ -682,9 +676,7 @@
 
     .h6,
     h6 {
-      @include fontSize(20px);
-
-      line-height: 1.4;
+      @include font_20;
     }
   }
 }

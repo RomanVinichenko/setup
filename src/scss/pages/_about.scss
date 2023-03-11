@@ -228,12 +228,9 @@
 
     span,
     p {
-      @include fontSize(20px);
+      @include font_20;
 
       display: block;
-      font-weight: 700;
-      line-height: 1.4;
-      color: $black;
     }
   }
 
@@ -248,19 +245,14 @@
     padding-bottom: get-vw(32px);
 
     p:first-of-type {
-      @include fontSize(16px);
 
       margin-bottom: get-vw(12px);
-      font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.01em;
+      @include font_16__700;
       color: $black;
     }
 
     p:nth-of-type(2) {
-      @include fontSize(14px);
-
-      line-height: 1.43;
+      @include font_14;
     }
   }
 }

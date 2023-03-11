@@ -33,12 +33,9 @@
     }
 
     a {
-      @include fontSize(14px);
+      @include font_14__700;
 
       position: relative;
-      font-weight: 700;
-      line-height: 1.71;
-      letter-spacing: -0.01em;
       text-transform: uppercase;
       color: $black;
       transition: color 0.3s;
@@ -90,14 +87,11 @@
 
   a {
     @include flex(center, center);
-    @include fontSize(14px);
+    @include font_14;
 
     padding: 0;
     width: get-vw(56px);
     height: get-vw(56px);
-    font-weight: 700;
-    line-height: 1.71;
-    letter-spacing: -0.01em;
     text-align: center;
     text-transform: uppercase;
     color: $gray-dark;
@@ -160,21 +154,18 @@
       }
 
       h6 {
-        @include fontSize(16px);
+        @include font_16;
 
         margin-bottom: get-vw(8px);
-        font-weight: 700;
-        letter-spacing: 0.01em;
         color: $black;
       }
 
       p {
-        @include fontSize(14px);
+        @include font_14;
 
         display: block;
         margin-bottom: get-vw(12px);
         width: fit-content;
-        line-height: 1.43;
       }
 
       a {

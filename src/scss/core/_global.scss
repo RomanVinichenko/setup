@@ -1,12 +1,9 @@
 body {
-  @include fontSize(16px);
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Archivo", sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
+  @include font_16;
   color: $gray-dark;
   background-color: $white;
   cursor: default;
@@ -35,7 +32,8 @@ section {
 
 .btn {
   @include flex(center, center);
-  @include fontSize(14px);
+  //@include fontSize(14px);
+  @include font_button;
 
   position: relative;
   align-items: center;
@@ -45,9 +43,9 @@ section {
   height: get-vw(56px);
   min-width: fit-content;
   border: none;
-  font-weight: 700;
-  line-height: 1.71;
-  letter-spacing: -0.01em;
+  //font-weight: 700;
+  //line-height: 1.71;
+  //letter-spacing: -0.01em;
   text-transform: uppercase;
   color: $white;
   background-image: url("/src/images/hover.svg");
@@ -244,12 +242,11 @@ section {
 
 .scroll {
   @include flex(center, center);
-  @include fontSize(14px);
+  @include font_14;
 
   position: absolute;
   z-index: 5;
   flex-direction: column;
-  line-height: 1.43;
   color: $black;
 
   img {
@@ -296,12 +293,11 @@ section {
   }
 
   &__text {
-    @include fontSize(14px);
+    @include font_14;
 
     position: relative;
     padding-right: get-vw(107px);
     padding-left: get-vw(32px);
-    line-height: 1.43;
 
     &::after {
       @include bg-contain;
@@ -476,18 +472,15 @@ section {
 
     .h5,
     h5 {
-      @include fontSize(24px);
+      @include font_24;
 
       margin-bottom: get-vw(4px);
-      font-weight: 700;
-      line-height: 1.33;
-      letter-spacing: -0.01em;
       color: $black;
     }
 
     span,
     p {
-      @include fontSize(14px);
+      @include font_14;
 
       display: block;
       margin-bottom: get-vw(16px);

@@ -161,11 +161,9 @@
         }
 
         p:first-of-type {
-          @include fontSize(14px);
+          @include font_14;
 
           margin-bottom: get-vw(6px);
-          font-weight: 700;
-          line-height: 1.43;
           text-align: center;
           color: $black;
         }
@@ -265,11 +263,10 @@
 
       .h6,
       h6 {
-        @include fontSize(20px);
+        @include font_20;
 
         padding: 0;
-        line-height: 1.4;
-        letter-spacing: 0;
+
       }
 
       img {
@@ -345,12 +342,10 @@
       margin-bottom: get-vw(40px);
 
       li {
-        @include fontSize(14px);
+        @include font_14;
 
         position: relative;
         padding-left: get-vw(21px);
-        font-weight: 700;
-        line-height: 1.43;
         color: $green;
 
         &::before {
@@ -368,10 +363,10 @@
     }
 
     span {
-      @include fontSize(14px);
+      @include font_14;
 
       display: inline-block;
-      line-height: 1.43;
+
 
       &:not(:last-child) {
         margin-bottom: get-vw(40px);
@@ -636,20 +631,16 @@
 
     li {
       span {
-        @include fontSize(14px);
+        @include font_14;
 
         display: block;
-        font-weight: 400;
-        line-height: 1.43;
       }
 
       .h6,
       h6 {
-        @include fontSize(20px);
+        @include font_20;
 
         margin-bottom: get-vw(4px);
-        font-weight: 700;
-        line-height: 1.4;
         color: $black;
       }
     }

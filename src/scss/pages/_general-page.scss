@@ -66,9 +66,8 @@
         }
 
         &::marker {
-          @include fontSize(16px);
-
-          font-weight: 600;
+          @include font_16;
+          @include f_600;
           line-height: get-vw(24px);
           color: $black;
         }

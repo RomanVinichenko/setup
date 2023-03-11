@@ -38,16 +38,160 @@ h6,
   }
 }
 
-.font_900 {
+@mixin f_900 {
+  font-family: "Archivo", sans-serif;
   font-weight: 900;
 }
 
-.font_700 {
+@mixin f_700 {
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
 }
 
-.font_600 {
+@mixin f_600 {
+  font-family: "Archivo", sans-serif;
   font-weight: 600;
+}
+
+@mixin f_400 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font_105 {
+  @include f_400;
+  font-size: get-vw(105px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  @media (max-width: 1200px){
+    font-size: 72px
+  }
+}
+
+@mixin font_64 {
+  @include f_900;
+  font-size: get-vw(64px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  @media (max-width: 1200px){
+    font-size: 48px;
+    line-height: 1.17;
+  }
+}
+
+@mixin font_48 {
+  @include f_900;
+  font-size: get-vw(48px);
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  @media (max-width: 1200px){
+    font-size: 48px;
+    line-height: 1.2;
+  }
+}
+
+@mixin font_40 {
+  @include f_700;
+  font-size: get-vw(40px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  @media (max-width: 1200px){
+    font-size: 32px;
+    line-height: 1.25;
+  }
+}
+
+@mixin font_32 {
+  @include f_700;
+  font-size: get-vw(32px);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  @media (max-width: 1200px){
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}
+@mixin font_32__400{
+  @include font_32;
+  @include f_400;
+}
+
+@mixin font_24 {
+  @include f_700;
+  font-size: get-vw(24px);
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+  @media (max-width: 1200px){
+    font-size: 20px;
+    line-height: 1.40;
+  }
+}
+
+@mixin font_24__400{
+  @include font_24;
+  @include f_400;
+}
+
+@mixin font_20{
+  @include f_400;
+  font-size: get-vw(20px);
+  line-height: 1.4;
+  @media (max-width: 1200px){
+    font-size: 20px;
+  }
+}
+
+@mixin font_16__700{
+  @include f_700;
+  font-size: get-vw(16px);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  @media (max-width: 1200px){
+    font-size: 16px;
+  }
+}
+
+@mixin font_16{
+  @include font_16__700;
+  @include f_400;
+}
+
+@mixin font_14__700{
+  @include f_400;
+  font-size: get-vw(14px);
+  line-height: 1.43;
+  @media (max-width: 1200px){
+    font-size: 14px;
+  }
+}
+
+@mixin font_14{
+  @include font_14__700;
+  @include f_400;
+}
+
+@mixin font_button{
+  @include font_14__700;
+  @include f_400;
+}
+
+
+
+
+
+
+
+
+.f_900 {
+  @include f_900
+}
+
+.f_700 {
+  @include f_700
+}
+
+.f_600 {
+  @include f_600
 }
 
 .color_black {
@@ -69,6 +213,12 @@ h6,
 .color_grey-medium {
   color: $gray-medium;
 }
+
+
+
+
+
+
 
 .lh_171 {
   line-height: 1.71;
@@ -119,31 +269,31 @@ h6,
 }
 
 .font_48 {
-  @include fontSize(48px);
+  @include font_48;
 }
 
 .font_40 {
-  @include fontSize(40px);
+  @include font_40;
 }
 
 .font_32 {
-  @include fontSize(32px);
+  @include font_32;
 }
 
 .font_24 {
-  @include fontSize(24px);
+  @include font_24;
 }
 
 .font_20 {
-  @include fontSize(20px);
+  @include font_20;
 }
 
 .font_16 {
-  @include fontSize(16px);
+  @include font_16;
 }
 
 .font_14 {
-  @include fontSize(14px);
+  @include font_14;
 }
 
 .text-center {
@@ -200,4 +350,46 @@ h6,
 
 .mt-40 {
   margin-top: get-vw(40px);
+}
+.font_105 {
+  @include font_105
+}
+.font_64 {
+  @include font_64
+}
+.font_48 {
+  @include font_48
+}
+.font_40 {
+  @include font_40
+}
+.font_32 {
+  @include font_32
+}
+.font_32__400 {
+  @include font_32__400
+}
+.font_24 {
+  @include font_24
+}
+.font_24__400 {
+  @include font_24__400
+}
+.font_20 {
+  @include font_20;
+}
+.font_16__700 {
+  @include font_16__700
+}
+.font_16 {
+  @include font_16
+}
+.font_14__700 {
+  @include font_14__700
+}
+.font_14 {
+  @include font_14
+}
+.font_button {
+  @include font_button
 }
