@@ -470,22 +470,22 @@ section {
       }
     }
 
-    .h5,
-    h5 {
-      @include font_24;
-
-      margin-bottom: get-vw(4px);
-      color: $black;
-    }
-
-    span,
-    p {
-      @include font_14;
-
-      display: block;
-      margin-bottom: get-vw(16px);
-      line-height: 1.43;
-    }
+    //.h5,
+    //h5 {
+    //  @include font_24;
+    //
+    //  margin-bottom: get-vw(4px);
+    //  color: $black;
+    //}
+    //
+    //span,
+    //p {
+    //  @include font_14;
+    //
+    //  display: block;
+    //  margin-bottom: get-vw(16px);
+    //  line-height: 1.43;
+    //}
 
     .btns {
       display: flex;

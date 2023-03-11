@@ -155,6 +155,12 @@
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  .scroll_container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
 
   .horizontal_scroll {
     display: flex;
@@ -442,20 +448,23 @@
 
       .giga__info {
         position: absolute;
-        left: get-vw(120px);
+        padding: get-vw(40px) get-vw(120px) get-vw(100px) get-vw(72px);
         top: 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding-top: get-vw(72px);
-        padding-right: get-vw(100px);
-        padding-bottom: get-vw(72px);
         width: 100%;
         height: 100%;
+        .container{
+          padding: 0;
+        }
 
         //min-width: calc(100% - #{get-vw(120px)});
         min-width: 100%;
+        @media (min-width: 1800px) {
+          padding-left: calc(100vw - (#{get-vw(1520px)} / 2));
+        }
 
         .title {
           opacity: 0;
@@ -819,6 +828,7 @@
       position: absolute;
       right: get-vw(40px);
       top: get-vw(16px);
+      left: auto;
     }
   }
 }
@@ -829,17 +839,26 @@
 
   .main-popup {
     width: get-vw(700px);
+    min-width: 700px;
     background-color: $white;
-
+    padding: 0;
+    .popup_inner {
+      overflow-x: scroll;
+      max-height: 80vh;
+    }
     .popup-content {
       padding: get-vw(40px) get-vw(56px);
       width: 100%;
+      .font_40{
+        margin-bottom: get-vw(24px)
+
+      }
+
 
       .h3,
       h3 {
         margin-bottom: get-vw(24px);
       }
-
       .wpcf7 {
         margin-top: get-vw(48px);
       }
