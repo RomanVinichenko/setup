@@ -108,23 +108,13 @@
 
 .partner {
   background-color: $gray-light;
-
   .h4,
   h4 {
     max-width: get-vw(690px);
   }
-
-  .swiper {
-    position: relative;
-    margin-bottom: get-vw(72px);
-    padding-top: get-vw(96px);
-  }
-
   .swiper__mix {
-    position: absolute;
-    left: 0;
-    top: 0;
     display: flex;
+    margin-bottom: 16px;
 
     .btn__white {
       border: get-vw(1px) solid $gray-medium;
@@ -137,44 +127,69 @@
     }
   }
 
-  .swiper__partner {
-    ul {
-      display: grid;
-      grid-gap: get-vw(24px);
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      padding: 0 get-vw(1px);
+  .tab_wrapper {
+    position: relative;
+    .partners_tab {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      &:first-child{
+        position: relative;
+      }
+      &.active{
+        z-index: 2;
+        opacity: 1;
+      }
 
-      li {
-        @include flex(center, center);
-
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        padding: get-vw(24px) get-vw(16px);
-        width: 100%;
-        border: get-vw(1px) solid rgba($gray-medium, 0.48);
-
-        img {
-          margin-bottom: get-vw(16px);
+      .swiper_nav{
+        position: relative;
+        top: -40px;
+      }
+      .swiper {
+        position: relative;
+        height: 100%;
+        .swiper-wrapper{
+          height: 600px;
+          padding-top: 0;
+        }
+        .swiper-slide .logo_item{
+          background: $white;
+          @include flex(center, center);
+          height: calc((100% - 48px) / 2) !important;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          padding: get-vw(24px) get-vw(16px);
           width: 100%;
-          max-width: get-vw(104px);
-        }
+          border: get-vw(1px) solid rgba($gray-medium, 0.48);
+          margin-top: get-vw(24px);
+          img {
+            margin-bottom: get-vw(16px);
+            max-width: 104px;
+            width: get-vw(104px);
+          }
 
-        p:first-of-type {
-          @include font_14;
+          p:first-of-type {
+            @include font_14__700;
+            margin-bottom: get-vw(6px);
+            text-align: center;
+            color: $black;
+          }
 
-          margin-bottom: get-vw(6px);
-          text-align: center;
-          color: $black;
-        }
-
-        p:last-of-type {
-          @include fontSize(12px);
-
-          max-width: get-vw(180px);
-          line-height: 1.33;
-          text-align: center;
-          color: $gray-black;
+          p:last-of-type {
+            @include fontSize(12px);
+            @media (max-width: 1500px){
+              font-size: 12px;
+            }
+            max-width: get-vw(180px);
+            line-height: 1.33;
+            text-align: center;
+            color: $gray-black;
+          }
         }
       }
     }
@@ -188,11 +203,12 @@
 
   .swiper-button-prev {
     right: get-vw(72px);
+    left: auto;
   }
 
   &__info {
     @include flex(flex-start, space-between);
-
+    margin-top: get-vw(72px);
     .h3,
     h3 {
       max-width: get-vw(588px);
@@ -207,9 +223,10 @@
 .other {
   ul {
     li {
+      min-height: get-vw(72px);
+
       &:first-child {
         @include flex(center, center);
-
         min-height: get-vw(72px);
         background-color: $white;
       }
@@ -241,7 +258,6 @@
 
     &::after {
       @include bg-contain;
-
       content: "";
       position: absolute;
       left: 50%;
@@ -656,10 +672,13 @@
   .swiper-button-prev {
     right: 0;
     top: 0;
+    margin-top: 0;
   }
 
   .swiper-button-prev {
     right: get-vw(72px);
+    left: auto;
+    margin-top: 0;
   }
 
   &__img {
@@ -738,7 +757,8 @@
 
   .swiper {
     position: relative;
-    padding-top: 0;
+    margin-top: get-vw(-67px);
+    padding-top: get-vw(123px);
   }
 
   .swiper-slide {
@@ -753,26 +773,42 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    position: relative;
+    //padding: 0 get-vw(40px);
+    //width: 100%;
+    //
+    //@media (min-width: 1800px) {
+    //  max-width: get-vw(1520px);
+    //}
+    right: get-vw(40px);
+    top: 0;
+    margin-top: 0;
   }
 
-  &__btns {
-    display: flex !important;
-
-    .swiper-button-prev {
-      margin-left: auto;
-    }
-
-    &.container {
-      margin-bottom: get-vw(64px);
-    }
+  .swiper-button-prev {
+    right: get-vw(128px);
+    left: auto;
+    margin-top: 0;
   }
+
+  //&__btns {
+  //  display: flex !important;
+  //
+  //  .swiper-button-prev {
+  //    margin-left: auto;
+  //    right: get-vw(72px);
+  //    left: auto;
+  //    margin-top: 0;
+  //  }
+  //
+  //  &.container {
+  //    margin-bottom: get-vw(64px);
+  //  }
+  //}
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   @include flex(center, center);
-
   position: absolute;
   z-index: 10;
   width: get-vw(56px);
@@ -780,6 +816,10 @@
   background-color: $black;
   transition: background-color 0.3s;
   cursor: pointer;
+
+  &:after{
+    display: none;
+  }
 
   &:hover {
     background-color: $green;
