@@ -1,8 +1,14 @@
 .products {
   padding: get-vw(160px) 0 0 0;
 
-  h1, .h1 {
+  @include media(1200px) {
+    padding-top: 123px;
+  }
+
+  h1,
+  .h1 {
     margin-bottom: get-vw(48px);
+
     @include media(1200px) {
       margin-bottom: 40px;
     }
@@ -11,16 +17,22 @@
   h2,
   .h2 {
     margin-bottom: auto;
+
     @include media(1200px) {
       margin-bottom: 32px;
     }
   }
-  h5, .h5 {
+
+  h5,
+  .h5 {
     margin-top: auto;
   }
 
-  h5, .h5, .h5__400 {
+  h5,
+  .h5,
+  .h5__400 {
     margin-bottom: get-vw(32px);
+
     @include media(1200px) {
       margin-bottom: 24px;
     }
@@ -38,6 +50,7 @@
     width: 100%;
     height: 100%;
     max-width: 55%;
+
     @include media($lg) {
       max-width: 50%;
     }
@@ -72,23 +85,24 @@
     @include media($md) {
       max-width: 100%;
     }
+
+    @include media($lg) {
+      padding: 56px 0;
+      max-width: 45%;
+    }
+
+    @include media($md) {
+      max-width: 100%;
+    }
+
     .btn__text-box {
       img {
         margin-left: get-vw(16px);
+
         @include media(1200px) {
           margin-left: 8px;
         }
       }
     }
-    @include media($lg) {
-      padding: 56px 0;
-      max-width: 45%;
-    }
-    @include media($md) {
-      max-width: 100%;
-    }
-  }
-  @include media(1200px) {
-    padding-top: 123px;
   }
 }

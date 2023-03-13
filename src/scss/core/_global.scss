@@ -52,8 +52,8 @@ section {
   height: get-vw(56px);
   overflow: hidden;
   border: none;
-  letter-spacing: -0.01em;
   line-height: 1.71;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   color: $white;
   background-color: $black;
@@ -157,6 +157,7 @@ section {
     color: $white;
     background-color: $gray-medium;
     cursor: not-allowed;
+
     &::after {
       display: none;
     }
@@ -236,8 +237,8 @@ section {
   }
 
   &__text-wrap {
-    z-index: 1;
     position: relative;
+    z-index: 1;
     height: get-vw(24px);
     overflow: hidden;
 
@@ -363,13 +364,18 @@ section {
   color: $black;
   background-color: $white;
 
+  @include media(1200px) {
+    padding: 18px 24px;
+  }
+
   .btn {
     margin: 0 get-vw(16px) 0 auto;
     height: get-vw(28px);
+    min-width: max-content;
     font-weight: 600;
     color: $white;
-    min-width: max-content;
     background-color: $black;
+
     @include media(1200px) {
       height: 28px;
     }
@@ -386,6 +392,11 @@ section {
     padding-right: get-vw(95px);
     padding-left: get-vw(32px);
 
+    @include media(1200px) {
+      padding-right: 30px;
+      padding-left: 32px;
+    }
+
     &::after {
       @include bg-contain;
 
@@ -398,6 +409,7 @@ section {
       background-image: url("/src/images/cookies.svg");
       filter: invert(1);
       transform: translateY(-50%);
+
       @include media(1200px) {
         width: 24px;
         height: 24px;
@@ -417,10 +429,6 @@ section {
         background-size: 100% 90%;
       }
     }
-    @include media(1200px) {
-      padding-left: 32px;
-      padding-right: 30px;
-    }
   }
 
   &__close {
@@ -430,6 +438,12 @@ section {
     width: get-vw(28px);
     height: get-vw(28px);
     border: get-vw(1px) solid $gray-black;
+
+    @include media(1200px) {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+    }
 
     &:hover {
       img {
@@ -442,19 +456,12 @@ section {
       height: get-vw(12px);
       filter: invert(1);
       transition: all 0.3s;
+
       @include media(1200px) {
         width: 12px;
         height: 12px;
       }
     }
-    @include media(1200px) {
-      width: 28px;
-      min-width: 28px;
-      height: 28px;
-    }
-  }
-  @include media(1200px) {
-    padding: 18px 24px;
   }
 }
 
