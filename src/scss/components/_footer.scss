@@ -1,23 +1,28 @@
 .footer {
   margin-top: auto;
   padding-top: get-vw(80px);
-  background-color: $black;
   color: $white;
+  background-color: $black;
 
-  &__start {
-    @include media($md) {
-      margin-bottom: 40px;
-    }
+  @include media($md) {
+    padding: 40px 0;
   }
 
   .logo {
     margin-bottom: get-vw(16px);
 
+    @include media($md) {
+      margin-bottom: 16px;
+    }
+
     img {
       filter: invert(1);
     }
+  }
+
+  &__start {
     @include media($md) {
-      margin-bottom: 16px;
+      margin-bottom: 40px;
     }
   }
 
@@ -26,6 +31,7 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: get-vw(72px);
+
     @include media($md) {
       flex-direction: column;
       justify-content: flex-start;
@@ -36,33 +42,37 @@
     margin-right: get-vw(109px);
     margin-left: auto;
 
+    @include media($md) {
+      margin: 0 0 40px;
+    }
+
     ul {
       li {
         a {
           @include font_14__700;
+
           text-transform: uppercase;
           color: $white;
         }
 
         &:not(:last-child) {
           margin-bottom: get-vw(20px);
+
           @include media($md) {
             margin-bottom: 20px;
           }
         }
       }
     }
-    @include media($md) {
-      margin: 0 0 40px 0;
-    }
   }
 
   &__touch {
     margin-right: get-vw(45px);
     max-width: 30%;
+
     @include media($md) {
-      max-width: 100%;
       margin-right: 0;
+      max-width: 100%;
     }
   }
 
@@ -76,6 +86,14 @@
     background-color: $black;
     transition: background-color 0.3s;
 
+    @include media($md) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 48px;
+      height: 48px;
+    }
+
     &::after {
       @include bg-contain;
 
@@ -87,6 +105,7 @@
       height: get-vw(24px);
       background-image: url("/src/images/up.svg");
       transform: translate(-50%, -50%);
+
       @media (max-width: 1200px) {
         width: 24px;
         height: 24px;
@@ -107,34 +126,39 @@
       width: 100%;
       color: $white;
       transform: translateX(-50%);
+
       @include media($md) {
         bottom: -70%;
       }
     }
+
     @media (max-width: 1200px) {
       width: 56px;
       height: 56px;
-    }
-    @include media($md) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 48px;
-      height: 48px;
-
     }
   }
 
   &__copy {
     @include font_14;
     @include flex(center, space-between);
-    line-height: 1.43;
+
     padding: get-vw(24px) 0;
     border-top: get-vw(1px) solid rgba($white, 0.12);
+    line-height: 1.43;
     color: $white;
+
+    @include media($md) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px 0 0;
+    }
 
     ul {
       display: flex;
+
+      @include media($md) {
+        margin: 12px 0;
+      }
 
       li {
         &:not(:last-child) {
@@ -151,9 +175,6 @@
             background-color: rgba($white, 0.12);
           }
         }
-      }
-      @include media($md) {
-        margin: 12px 0;
       }
     }
 
@@ -181,18 +202,10 @@
         width: fit-content;
       }
     }
-    @include media($md) {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 24px 0 0;
-    }
   }
 
   @media (max-width: 1200px) {
     padding-top: 60px;
-  }
-  @include media($md) {
-    padding: 40px 0;
   }
 }
 
@@ -213,11 +226,13 @@
         top: 0;
         width: get-vw(24px);
         height: get-vw(24px);
+
         @media (max-width: 1200px) {
           width: 24px;
           height: 24px;
         }
       }
+
       @media (max-width: 1200px) {
         padding-left: 40px;
       }
@@ -225,6 +240,7 @@
 
     &:not(:last-child) {
       margin-bottom: get-vw(28px);
+
       @include media($md) {
         margin-bottom: 16px;
       }
@@ -260,6 +276,10 @@
   display: flex;
   margin-top: get-vw(16px);
 
+  @include media(1200px) {
+    margin-top: 16px;
+  }
+
   li {
     a {
       @include flex(center, center);
@@ -286,9 +306,11 @@
           transition: all 0.3s;
         }
       }
+
       @media (max-width: 1200px) {
         width: 48px;
         height: 48px;
+
         img,
         svg {
           width: 16px;
@@ -299,12 +321,10 @@
 
     &:not(:last-child) {
       margin-right: get-vw(12px);
+
       @include media(1200px) {
         margin-right: 12px;
       }
     }
-  }
-  @include media(1200px) {
-    margin-top: 16px;
   }
 }

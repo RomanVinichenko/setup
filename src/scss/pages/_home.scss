@@ -42,6 +42,11 @@
     margin-bottom: get-vw(32px);
     height: 100%;
     max-width: 62%;
+
+    @include media($md) {
+      margin-bottom: 24px;
+      max-width: 100%;
+    }
   }
 
   &__video {
@@ -49,6 +54,11 @@
     margin-left: get-vw(24px);
     width: 100%;
     max-width: 100%;
+
+    @include media($md) {
+      margin-top: 48px;
+      margin-left: 0;
+    }
 
     img {
       width: 100%;
@@ -75,6 +85,11 @@
     flex-wrap: nowrap;
     min-height: 100vh;
     max-height: 100vh;
+
+    @include media($md) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 
@@ -155,12 +170,12 @@
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
-  .scroll_container{
-    height: 100vh;
+
+  .scroll_container {
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
-
 
   .horizontal_scroll {
     display: flex;
@@ -273,11 +288,20 @@
   h4 {
     margin-bottom: auto;
     max-width: get-vw(486px);
+
+    @include media($md) {
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include media($md) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -285,6 +309,11 @@
     flex-direction: column;
     margin-right: get-vw(30px);
     max-width: 38%;
+
+    @include media($md) {
+      margin-right: 0;
+      max-width: 100%;
+    }
   }
 
   &__text {
@@ -295,9 +324,19 @@
     height: get-vw(588px);
     max-width: 45%;
 
+    @include media($md) {
+      margin-top: 40px;
+      height: auto;
+      max-width: 100%;
+    }
+
     img {
       height: get-vw(588px);
       object-fit: cover;
+
+      @include media($md) {
+        height: 100%;
+      }
     }
   }
 }
@@ -306,9 +345,33 @@
   min-height: get-vw(688px);
   background-color: $black;
 
+  @include media($md) {
+    padding: 137px 0;
+    min-height: auto;
+  }
+
+  .btn__text-box {
+    img {
+      @include media(1200px) {
+        margin-left: 8px;
+      }
+    }
+  }
+
   .container {
     display: flex;
     min-height: get-vw(688px);
+
+    @include media($md) {
+      padding: 137px 20px;
+      min-height: auto;
+    }
+  }
+
+  .triangles__info {
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -319,6 +382,10 @@
   .h4,
   h4 {
     max-width: 85%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
@@ -326,6 +393,11 @@
     align-items: center;
     grid-gap: 0 get-vw(24px);
     grid-template-columns: 32% 1fr;
+
+    @include media($md) {
+      grid-gap: 24px;
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -387,12 +459,20 @@
 
   &__wrapper {
     @include flex(flex-start, space-between);
+
+    @include media($md) {
+      flex-direction: column;
+    }
   }
 
   &__info {
     position: sticky;
     top: get-vw(200px);
     max-width: get-vw(305px);
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   &__box-info {
@@ -448,22 +528,20 @@
 
       .giga__info {
         position: absolute;
-        padding: get-vw(40px) get-vw(120px) get-vw(100px) get-vw(72px);
         top: 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        padding: get-vw(40px) get-vw(120px) get-vw(100px) get-vw(72px);
         width: 100%;
         height: 100%;
-        .container{
-          padding: 0;
-        }
 
         //min-width: calc(100% - #{get-vw(120px)});
         min-width: 100%;
-        @media (min-width: 1800px) {
-          padding-left: calc(100vw - (#{get-vw(1520px)} / 2));
+
+        .container {
+          padding: 0;
         }
 
         .title {
@@ -479,6 +557,10 @@
         .giga__text {
           opacity: 0;
           transform: translateY(-25px);
+        }
+
+        @media (min-width: 1800px) {
+          padding-left: calc(100vw - (#{get-vw(1520px)} / 2));
         }
       }
     }
@@ -539,6 +621,7 @@
 
     p {
       @include font_20;
+
       color: $black;
 
       &:not(:last-child) {
@@ -554,18 +637,27 @@
   height: get-vw(808px);
   max-height: get-vw(808px);
 
-  h2,
-  .h2 {
-
+  @include media($md) {
+    height: auto;
+    max-height: 100%;
   }
 
   .triangles__info {
     max-width: get-vw(400px);
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   .container {
     width: 100%;
     height: get-vw(792px);
+
+    @include media($md) {
+      padding: 132px 0;
+      height: auto;
+    }
   }
 
   &__dark {
@@ -586,6 +678,11 @@
     height: get-vw(808px);
     max-height: get-vw(808px);
     object-fit: cover;
+
+    @include media($md) {
+      height: 100%;
+      max-height: 100%;
+    }
   }
 }
 
@@ -671,10 +768,18 @@
     @include flex(flex-start, space-between);
 
     margin-top: get-vw(72px);
+
+    @include media($md) {
+      flex-direction: column;
+    }
   }
 
   &__swiper {
     max-width: 38%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
 
     .h3,
     h3 {
@@ -752,15 +857,32 @@
   height: get-vw(900px);
   max-height: get-vw(900px);
 
+  @include media($md) {
+    height: auto;
+    max-height: 100%;
+  }
+
   .h2,
   h2 {
     position: absolute;
     top: get-vw(140px);
     max-width: get-vw(481px);
+
+    @include media($md) {
+      position: relative;
+      max-width: 100%;
+      font-size: 40px;
+    }
   }
 
   .container {
     height: get-vw(900px);
+
+    @include media($md) {
+      height: auto;
+      min-height: 600px;
+      max-height: 100%;
+    }
   }
 
   .btn {
@@ -780,6 +902,10 @@
   h4 {
     position: absolute;
     bottom: get-vw(87px);
+
+    @include media($md) {
+      max-width: 100%;
+    }
 
     &::after {
       @include bg-contain;
@@ -807,7 +933,8 @@
   }
 }
 
-#videoPopup, .video-popup {
+#videoPopup,
+.video-popup {
   padding: 0;
 
   .main-popup {
@@ -826,9 +953,9 @@
 
     .btn_close {
       position: absolute;
+      left: auto;
       right: get-vw(40px);
       top: get-vw(16px);
-      left: auto;
     }
   }
 }
@@ -838,27 +965,29 @@
   padding: 0;
 
   .main-popup {
+    padding: 0;
     width: get-vw(700px);
     min-width: 700px;
     background-color: $white;
-    padding: 0;
+
     .popup_inner {
-      overflow-x: scroll;
       max-height: 80vh;
+      overflow-x: scroll;
     }
+
     .popup-content {
       padding: get-vw(40px) get-vw(56px);
       width: 100%;
-      .font_40{
-        margin-bottom: get-vw(24px)
 
+      .font_40 {
+        margin-bottom: get-vw(24px);
       }
-
 
       .h3,
       h3 {
         margin-bottom: get-vw(24px);
       }
+
       .wpcf7 {
         margin-top: get-vw(48px);
       }

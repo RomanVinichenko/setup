@@ -6,6 +6,10 @@
   padding: get-vw(20px) 0 0 0;
   background-color: transparent;
   transition: padding 0.3s, background-color 0.3s;
+
+  @include media($lg) {
+    display: none;
+  }
 }
 
 .header--active {
@@ -54,15 +58,16 @@
 
       &::after {
         @include bg-contain;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
+
         content: "";
         position: absolute;
         right: 0;
         top: 0;
         width: get-vw(24px);
+        height: 100%;
         background-image: url("/src/images/header-arrow.svg");
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
   }
@@ -82,10 +87,10 @@
   left: 50%;
   top: get-vw(52px);
   z-index: 6;
-  visibility: hidden;
-  opacity: 0;
   display: flex;
   flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
   transform: translateX(-50%);
 
   a {
@@ -123,14 +128,14 @@
 }
 
 .products-drop {
-  visibility: hidden;
-  opacity: 0;
   position: absolute;
   left: 50%;
   top: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
+  opacity: 0;
   padding: get-vw(40px) 0;
   width: 100%;
   border-top: get-vw(1px) solid $gray-medium;
