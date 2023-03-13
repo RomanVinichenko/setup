@@ -4,10 +4,18 @@
   .h1 {
     padding-bottom: get-vw(48px);
     border-bottom: get-vw(1px) solid $gray-medium;
+    @media (max-width: 1200px){
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid $gray-medium;
+    }
   }
 
   &__wrapper {
     @include flex(flex-start, space-between);
+  }
+  @media (max-width: 1200px){
+    padding: 133px 0 72px;
   }
 }
 
@@ -28,11 +36,20 @@
     }
   }
 
+  &__nav {
+    @include media($lg) {
+      margin-bottom: 40px;
+    }
+  }
+
   &__main {
     max-width: 55%;
 
     p {
       margin-bottom: get-vw(24px);
+      @include media($lg) {
+        margin-bottom: 24px;
+      }
     }
 
     ul {
@@ -71,33 +88,97 @@
           line-height: get-vw(24px);
           color: $black;
         }
+        @include media($lg) {
+          margin-left: 18px;
+        }
       }
+    }
+    @include media($lg) {
+      max-width: 100%;
+    }
+  }
+
+  .general-page__wrapper {
+    @include media($lg) {
+      flex-direction: column;
     }
   }
 }
 
 .thank {
   padding-bottom: get-vw(58px);
+  .general-page__wrapper {
+    @media (max-width: 647px) {
+      flex-direction: column;
+    }
+  }
 
   .h5,
   h5 {
-    max-width: 40%;
+    max-width: 80%;
+    margin-bottom: get-vw(32px);
+    @media (max-width: 1200px) {
+      margin-bottom: 24px;
+    }
+    @media (max-width: 647px) {
+      max-width: 100%;
+    }
+  }
+  .general-page__text {
+    @media (max-width: 647px) {
+      margin-bottom: 48px;
+    }
   }
 
   .general-page__img {
+    width: 100%;
     img {
       width: get-vw(486px);
       height: get-vw(486px);
+      margin-left: auto;
+      @media (max-width: 1200px) {
+        max-width: 335px;
+        width: 100%;
+        height: auto;
+      }
+      @media (max-width: 647px) {
+        margin: 0 auto;
+      }
     }
+  }
+  @media (max-width: 1200px){
+    padding-bottom: 72px;
   }
 }
 
 .error {
   padding-bottom: get-vw(75px);
 
+  .general-page__wrapper {
+    @include media($md) {
+      flex-direction: column;
+    }
+  }
+
+  .h5,
+  h5 {
+    margin-bottom: get-vw(32px);
+    @include media(1200px) {
+      margin-bottom: 24px;
+    }
+  }
+
   .general-page__text {
     margin-right: get-vw(24px);
     max-width: 28%;
+    @include media(1200px) {
+      margin-right: 24px;
+    }
+    @include media($md) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
   }
 
   &__message {
@@ -116,6 +197,10 @@
       position: absolute;
       width: get-vw(283px);
       height: get-vw(282px);
+      @include media($md) {
+        width: 120px;
+        height: 120px;
+      }
     }
 
     &::before {
@@ -138,6 +223,12 @@
       line-height: 1;
       letter-spacing: -0.06em;
       color: $green;
+      @include media(1200px) {
+        font-size: 191px;
+      }
     }
+  }
+  @media (max-width: 1200px){
+    padding-bottom: 72px;
   }
 }

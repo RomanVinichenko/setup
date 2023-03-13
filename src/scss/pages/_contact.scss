@@ -2,6 +2,10 @@
   h2,
   .h2 {
     max-width: 60%;
+    margin-bottom: get-vw(16px);
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   h5,
@@ -62,10 +66,16 @@
 
   &__wrapper {
     @include flex(flex-start, space-between);
+    @include media($md) {
+     flex-direction: column;
+    }
   }
 
   &__main {
-    //max-width: 50%;
+    max-width: 50%;
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 }
 
