@@ -1,8 +1,13 @@
 .session {
   h2,
   .h2 {
-    max-width: 60%;
     margin-bottom: get-vw(16px);
+    max-width: 60%;
+
+    @include media(1200px) {
+      margin-bottom: 16px;
+    }
+
     @include media($md) {
       max-width: 100%;
     }
@@ -10,23 +15,37 @@
 
   h5,
   .h5 {
+    margin-bottom: get-vw(40px);
     max-width: 50%;
+
+    @include media(1200px) {
+      margin-bottom: 40px;
+    }
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
+
   .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    .session__wrapper{
+
+    .session__wrapper {
       flex: 0 0 50%;
       max-width: 50%;
+
       @media (max-width: 1200px) {
         flex: 0 0 100%;
         max-width: 100%;
       }
     }
-    .form_wrapper{
+
+    .form_wrapper {
       flex: 0 0 50%;
       max-width: 50%;
+
       @media (max-width: 1200px) {
         flex: 0 0 100%;
         max-width: 100%;
@@ -66,13 +85,15 @@
 
   &__wrapper {
     @include flex(flex-start, space-between);
+
     @include media($md) {
-     flex-direction: column;
+      flex-direction: column;
     }
   }
 
   &__main {
     max-width: 50%;
+
     @include media($md) {
       max-width: 100%;
     }
@@ -87,10 +108,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include media(1200px) {
+    height: 594px;
+  }
+
   .h4,
   h4 {
     margin-top: auto;
     max-width: get-vw(422px);
+
+    @include media(1200px) {
+      max-width: 100%;
+    }
   }
 
   .btn__white {
@@ -115,6 +144,10 @@
     display: flex;
     flex-direction: column;
     height: get-vw(600px);
+
+    @include media(1200px) {
+      height: 594px;
+    }
   }
 }
 
@@ -123,19 +156,46 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    .form_wrapper{
+
+    .form_wrapper {
       flex: 0 0 50%;
       max-width: 50%;
+
       @media (max-width: 1200px) {
         flex: 0 0 100%;
         max-width: 100%;
       }
     }
   }
+
+  h2,
+  .h2 {
+    margin-bottom: get-vw(32px);
+
+    @include media(1200px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  h4,
+  .h4 {
+    margin-bottom: get-vw(48px);
+
+    @include media(1200px) {
+      margin-bottom: 48px;
+    }
+  }
+
   &__wrapper {
     @include flex(flex-start, space-between);
+
     flex: 0 0 50%;
     max-width: 50%;
+
+    @include media($md) {
+      flex-direction: column;
+    }
+
     @media (max-width: 1200px) {
       flex: 0 0 100%;
       max-width: 100%;
@@ -143,7 +203,12 @@
   }
 
   &__main {
-    max-width: get-vw(510px);
+    width: 100%;
+    max-width: 50%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -154,45 +219,88 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include media(1200px) {
+    padding: 50px 0 200px;
+  }
+
   .h2,
   h2 {
     max-width: 52%;
+
+    @include media($lg) {
+      font-size: 40px;
+    }
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 }
 
 .career {
-  &__wrapper {
-    @include flex(flex-start, space-between);
-  }
   .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    .career__wrapper{
+
+    .career__wrapper {
       flex: 0 0 50%;
       max-width: 50%;
+
       @media (max-width: 1200px) {
         flex: 0 0 100%;
         max-width: 100%;
       }
     }
-    .form_wrapper{
+
+    .form_wrapper {
       flex: 0 0 50%;
       max-width: 50%;
-      @media (max-width: 1200px) {
+
+      @include media(1200px) {
         flex: 0 0 100%;
         max-width: 100%;
       }
     }
+  }
+
+  &__wrapper {
+    @include flex(flex-start, space-between);
   }
 
   &__main {
     width: 100%;
     max-width: 50%;
 
+    @include media($md) {
+      max-width: 100%;
+    }
+
+    h2,
+    .h2 {
+      margin-bottom: get-vw(32px);
+
+      @include media(1200px) {
+        margin-bottom: 32px;
+      }
+    }
+
+    h4,
+    .h4 {
+      margin-bottom: get-vw(20px);
+
+      @include media(1200px) {
+        margin-bottom: 20px;
+      }
+    }
+
     .h5,
     h5 {
       max-width: get-vw(486px);
+
+      @include media($md) {
+        max-width: 100%;
+      }
     }
   }
 }

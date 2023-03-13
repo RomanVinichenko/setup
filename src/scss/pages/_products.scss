@@ -22,10 +22,30 @@
     min-height: get-vw(700px);
     max-width: get-vw(810px);
 
+    @include media($md) {
+      position: relative;
+      min-height: auto;
+      max-width: 100%;
+      max-height: 400px;
+    }
+
+    @include media($sm) {
+      max-height: 324px;
+    }
+
     img {
       height: 100%;
       min-height: get-vw(700px);
       object-fit: cover;
+
+      @include media($md) {
+        min-height: auto;
+        max-height: 400px;
+      }
+
+      @include media($sm) {
+        max-height: 324px;
+      }
     }
   }
 
@@ -37,5 +57,18 @@
     height: 100%;
     min-height: get-vw(700px);
     max-width: 32%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
+
+    h2,
+    .h2 {
+      margin-bottom: get-vw(32px);
+
+      @include media(1200px) {
+        margin-bottom: 32px;
+      }
+    }
   }
 }

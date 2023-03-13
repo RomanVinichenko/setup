@@ -60,20 +60,24 @@ h6,
 
 @mixin font_105 {
   @include f_400;
+
   font-size: get-vw(105px);
   line-height: 1;
   letter-spacing: -0.02em;
-  @media (max-width: 1200px){
-    font-size: 72px
+
+  @media (max-width: 1200px) {
+    font-size: 72px;
   }
 }
 
 @mixin font_64 {
   @include f_900;
+
   font-size: get-vw(64px);
   line-height: 1.12;
   letter-spacing: -0.02em;
-  @media (max-width: 1200px){
+
+  @media (max-width: 1200px) {
     font-size: 48px;
     line-height: 1.17;
     letter-spacing: -0.03em;
@@ -82,10 +86,12 @@ h6,
 
 @mixin font_48 {
   @include f_900;
+
   font-size: get-vw(48px);
   line-height: 1.17;
   letter-spacing: -0.03em;
-  @media (max-width: 1200px){
+
+  @media (max-width: 1200px) {
     font-size: 48px;
     line-height: 1.2;
   }
@@ -93,10 +99,12 @@ h6,
 
 @mixin font_40 {
   @include f_700;
+
   font-size: get-vw(40px);
   line-height: 1.2;
   letter-spacing: -0.03em;
-  @media (max-width: 1200px){
+
+  @media (max-width: 1200px) {
     font-size: 32px;
     line-height: 1.25;
   }
@@ -104,27 +112,32 @@ h6,
 
 @mixin font_32 {
   @include f_700;
+
   font-size: get-vw(32px);
   line-height: 1.25;
   letter-spacing: -0.03em;
-  @media (max-width: 1200px){
+
+  @media (max-width: 1200px) {
     font-size: 24px;
     line-height: 1.33;
   }
 }
-@mixin font_32__400{
+
+@mixin font_32__400 {
   @include font_32;
   @include f_400;
 }
 
 @mixin font_24 {
   @include f_700;
+
   font-size: get-vw(24px);
   line-height: 1.33;
   letter-spacing: -0.01em;
+
   @media (max-width: 1200px) {
     font-size: 20px;
-    line-height: 1.40;
+    line-height: 1.4;
     letter-spacing: normal;
   }
 }
@@ -136,58 +149,61 @@ h6,
 
 @mixin font_20 {
   @include f_400;
+
   font-size: get-vw(20px);
   line-height: 1.4;
-  @media (max-width: 1200px){
+
+  @media (max-width: 1200px) {
     font-size: 20px;
   }
 }
 
-@mixin font_16__700{
+@mixin font_16__700 {
   @include f_700;
+
   font-size: get-vw(16px);
   line-height: 1.5;
   letter-spacing: -0.01em;
-  @media (max-width: 1200px){
+
+  @media (max-width: 1200px) {
     font-size: 16px;
   }
 }
 
-@mixin font_16{
+@mixin font_16 {
   @include font_16__700;
   @include f_400;
 }
 
-@mixin font_14__700{
+@mixin font_14__700 {
   @include f_700;
+
   font-size: get-vw(14px);
   line-height: 1.71;
-  @media (max-width: 1200px){
+
+  @media (max-width: 1200px) {
     font-size: 14px;
   }
 }
 
-@mixin font_14{
+@mixin font_14 {
   @include font_14__700;
   @include f_400;
 }
 
-@mixin font_button{
+@mixin font_button {
   @include font_14__700;
   @include f_700;
 }
 
 .f_900 {
-  @include f_900
-}
+  @include f_900; }
 
 .f_700 {
-  @include f_700
-}
+  @include f_700; }
 
 .f_600 {
-  @include f_600
-}
+  @include f_600; }
 
 .color_black {
   color: $black;
@@ -203,6 +219,10 @@ h6,
 
 .color_white {
   color: $white;
+}
+
+.color_gray-dark {
+  color: $gray-dark;
 }
 
 .color_grey-medium {
@@ -243,6 +263,7 @@ h6,
 
 .mb-68 {
   margin-bottom: get-vw(68px);
+
   @include media($lg) {
     margin-bottom: 68px;
   }
@@ -250,6 +271,7 @@ h6,
 
 .mb-64 {
   margin-bottom: get-vw(64px);
+
   @include media($lg) {
     margin-bottom: 64px;
   }
@@ -257,6 +279,7 @@ h6,
 
 .mb-48 {
   margin-bottom: get-vw(48px);
+
   @include media($lg) {
     margin-bottom: 48px;
   }
@@ -264,6 +287,7 @@ h6,
 
 .mb-40 {
   margin-bottom: get-vw(40px);
+
   @include media($lg) {
     margin-bottom: 40px;
   }
@@ -271,6 +295,7 @@ h6,
 
 .mb-32 {
   margin-bottom: get-vw(32px);
+
   @include media($lg) {
     margin-bottom: 32px;
   }
@@ -278,6 +303,7 @@ h6,
 
 .mb-28 {
   margin-bottom: get-vw(28px);
+
   @include media($lg) {
     margin-bottom: 28px;
   }
@@ -285,6 +311,7 @@ h6,
 
 .mb-24 {
   margin-bottom: get-vw(24px);
+
   @include media($lg) {
     margin-bottom: 24px;
   }
@@ -292,6 +319,7 @@ h6,
 
 .mb-20 {
   margin-bottom: get-vw(20px);
+
   @include media($lg) {
     margin-bottom: 20px;
   }
@@ -299,6 +327,7 @@ h6,
 
 .mb-16 {
   margin-bottom: get-vw(16px);
+
   @include media($lg) {
     margin-bottom: 16px;
   }
@@ -306,6 +335,7 @@ h6,
 
 .mb-8 {
   margin-bottom: get-vw(8px);
+
   @include media($lg) {
     margin-bottom: 8px;
   }
@@ -313,6 +343,7 @@ h6,
 
 .mb-4 {
   margin-bottom: get-vw(4px);
+
   @include media($lg) {
     margin-bottom: 4px;
   }
@@ -320,6 +351,7 @@ h6,
 
 .mt-48 {
   margin-top: get-vw(48px);
+
   @include media($lg) {
     margin-top: 48px;
   }
@@ -327,49 +359,64 @@ h6,
 
 .mt-40 {
   margin-top: get-vw(40px);
+
   @include media($lg) {
     margin-top: 40px;
   }
 }
+
 .font_105 {
   @include font_105;
 }
+
 .font_64 {
   @include font_64;
 }
+
 .font_48 {
   @include font_48;
 }
+
 .font_40 {
   @include font_40;
 }
+
 .font_32 {
   @include font_32;
 }
+
 .font_32__400 {
   @include font_32__400;
 }
+
 .font_24 {
   @include font_24;
 }
+
 .font_24__400 {
   @include font_24__400;
 }
+
 .font_20 {
   @include font_20;
 }
+
 .font_16__700 {
   @include font_16__700;
 }
+
 .font_16 {
   @include font_16;
 }
+
 .font_14__700 {
   @include font_14__700;
 }
+
 .font_14 {
   @include font_14;
 }
+
 .font_button {
   @include font_button;
 }

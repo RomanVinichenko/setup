@@ -3,13 +3,24 @@
 
   .h4,
   h4 {
+    margin-bottom: get-vw(16px);
     max-width: 80%;
+
+    @include media($md) {
+      margin-bottom: 16px;
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-gap: 0 get-vw(24px);
     grid-template-columns: 1fr 1fr;
+
+    @include media($md) {
+      grid-gap: 32px 0;
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -18,6 +29,23 @@
     display: grid;
     grid-gap: get-vw(24px);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    @include media(1200px) {
+      grid-gap: 24px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @include media($lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include media($md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include media($sm) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     li {
       position: relative;
@@ -30,12 +58,20 @@
 
       img {
         margin-bottom: get-vw(16px);
+
+        @include media(1200px) {
+          margin-bottom: 16px;
+        }
       }
     }
   }
 
   .p {
     margin-bottom: get-vw(12px);
+
+    @include media(1200px) {
+      margin-bottom: 12px;
+    }
   }
 
   a {
@@ -46,6 +82,11 @@
     height: get-vw(40px);
     border: get-vw(1px) solid $gray-medium;
     transition: border 0.3s;
+
+    @include media(1200px) {
+      width: 40px;
+      height: 40px;
+    }
 
     &:hover {
       border: get-vw(1px) solid $green;
@@ -62,10 +103,23 @@
       height: get-vw(16px);
       transition: all 0.3s;
 
+      @include media(1200px) {
+        width: 16px;
+        height: 16px;
+      }
+
       path {
         fill: $black;
         transition: all 0.3s;
       }
+    }
+  }
+
+  &__name {
+    margin-bottom: get-vw(4px);
+
+    @include media(1200px) {
+      margin-bottom: 4px;
     }
   }
 }
@@ -75,8 +129,16 @@
   padding: 0;
   height: get-vw(810px);
 
+  @include media(1200px) {
+    height: 700px;
+  }
+
   .container {
     height: get-vw(810px);
+
+    @include media(1200px) {
+      height: 700px;
+    }
   }
 
   img {
@@ -89,6 +151,10 @@
     width: 100%;
     height: get-vw(810px);
     object-fit: cover;
+
+    @include media(1200px) {
+      height: 700px;
+    }
   }
 
   .h2,
@@ -96,6 +162,12 @@
     z-index: 5;
     padding-top: get-vw(104px);
     max-width: get-vw(690px);
+
+    @include media(1200px) {
+      padding-top: 46px;
+      max-width: 100%;
+      font-size: 40px;
+    }
   }
 }
 
@@ -148,6 +220,10 @@
       height: get-vw(586px);
       object-fit: cover;
       transition: all 0.3s;
+
+      @include media($md) {
+        position: relative;
+      }
     }
 
     &.open {
@@ -165,8 +241,12 @@
 
   .panel-title {
     margin-left: auto;
-    max-width: get-vw(486px);
+    max-width: 45%;
     cursor: pointer;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   .item_title {
@@ -187,6 +267,11 @@
       background-color: $black;
       transition: all 0.3s;
 
+      @include media(1200px) {
+        width: 36px;
+        height: 36px;
+      }
+
       &::after,
       &::before {
         content: "";
@@ -202,11 +287,21 @@
       &::before {
         width: get-vw(1px);
         height: get-vw(8px);
+
+        @include media(1200px) {
+          width: 1px;
+          height: 8px;
+        }
       }
 
       &::after {
         width: get-vw(8px);
         height: get-vw(1px);
+
+        @include media(1200px) {
+          width: 8px;
+          height: 1px;
+        }
       }
     }
 
@@ -231,28 +326,37 @@
       @include font_20;
 
       display: block;
+      font-weight: 700;
     }
   }
 
   .panel-collapse {
     margin-left: auto;
     height: 0;
-    max-width: get-vw(486px);
+    max-width: 45%;
     overflow: hidden;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   .panel-body {
     padding-bottom: get-vw(32px);
 
     p:first-of-type {
+      @include font_16__700;
 
       margin-bottom: get-vw(12px);
-      @include font_16__700;
       color: $black;
     }
 
     p:nth-of-type(2) {
       @include font_14;
+    }
+
+    p:last-of-type {
+      color: $gray-dark;
     }
   }
 }
@@ -272,13 +376,15 @@
     .tradition__active {
       opacity: 1;
     }
-    .load{
+
+    .load {
       height: 1px;
       background-color: $gray-medium;
+
       .loading {
         width: 0;
-        background-color: $black;
         height: 1px;
+        background-color: $black;
       }
     }
 
@@ -300,10 +406,10 @@
       display: grid;
       grid-gap: 0 get-vw(24px);
       grid-template-columns: 1fr 1fr 1fr;
+      opacity: 0;
       margin-bottom: get-vw(48px);
       width: 100%;
       height: 100%;
-      opacity: 0;
 
       &:first-child {
         position: relative;

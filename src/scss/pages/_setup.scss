@@ -2,6 +2,10 @@
   .h2,
   h2 {
     max-width: get-vw(588px);
+
+    @include media(1200px) {
+      max-width: 100%;
+    }
   }
 
   ul {
@@ -45,6 +49,10 @@
         width: 100%;
         border-top: get-vw(1px) solid $gray-medium;
         transition: all 0.3s;
+
+        @include media(1200px) {
+          padding: 16px 0;
+        }
 
         &:hover {
           span {
@@ -108,10 +116,12 @@
 
 .partner {
   background-color: $gray-light;
+
   .h4,
   h4 {
     max-width: get-vw(690px);
   }
+
   .swiper__mix {
     display: flex;
     margin-bottom: 16px;
@@ -129,52 +139,56 @@
 
   .tab_wrapper {
     position: relative;
+
     .partners_tab {
       position: absolute;
-      top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0;
       z-index: 1;
       opacity: 0;
-      &:first-child{
+      width: 100%;
+      height: 100%;
+
+      &:first-child {
         position: relative;
       }
-      &.active{
-        z-index: 2;
-        opacity: 1;
-      }
 
-      .swiper_nav{
+      .swiper_nav {
         position: relative;
         top: -40px;
       }
+
       .swiper {
         position: relative;
         height: 100%;
-        .swiper-wrapper{
-          height: 600px;
+
+        .swiper-wrapper {
           padding-top: 0;
+          height: 600px;
         }
-        .swiper-slide .logo_item{
-          background: $white;
+
+        .swiper-slide .logo_item {
           @include flex(center, center);
-          height: calc((100% - 48px) / 2) !important;
+
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
+          margin-top: get-vw(24px);
           padding: get-vw(24px) get-vw(16px);
           width: 100%;
+          height: calc((100% - 48px) / 2) !important;
           border: get-vw(1px) solid rgba($gray-medium, 0.48);
-          margin-top: get-vw(24px);
+          background: $white;
+
           img {
             margin-bottom: get-vw(16px);
-            max-width: 104px;
             width: get-vw(104px);
+            max-width: 104px;
           }
 
           p:first-of-type {
             @include font_14__700;
+
             margin-bottom: get-vw(6px);
             text-align: center;
             color: $black;
@@ -182,15 +196,22 @@
 
           p:last-of-type {
             @include fontSize(12px);
-            @media (max-width: 1500px){
-              font-size: 12px;
-            }
+
             max-width: get-vw(180px);
             line-height: 1.33;
             text-align: center;
             color: $gray-black;
+
+            @media (max-width: 1500px) {
+              font-size: 12px;
+            }
           }
         }
+      }
+
+      &.active {
+        z-index: 2;
+        opacity: 1;
       }
     }
   }
@@ -202,31 +223,55 @@
   }
 
   .swiper-button-prev {
-    right: get-vw(72px);
     left: auto;
+    right: get-vw(72px);
   }
 
   &__info {
     @include flex(flex-start, space-between);
+
     margin-top: get-vw(72px);
+
+    @include media($md) {
+      flex-direction: column;
+    }
+
     .h3,
     h3 {
-      max-width: get-vw(588px);
+      max-width: 45%;
+
+      @include media($md) {
+        margin-bottom: 16px;
+        max-width: 100%;
+      }
     }
   }
 
   &__info-block {
-    max-width: get-vw(485px);
+    max-width: 45%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 }
 
 .other {
+  overflow: hidden;
+
   ul {
     li {
-      min-height: get-vw(72px);
+      display: flex;
+      align-items: center;
+      min-height: get-vw(56px);
+
+      @include media(1200px) {
+        min-height: 60px;
+      }
 
       &:first-child {
         @include flex(center, center);
+
         min-height: get-vw(72px);
         background-color: $white;
       }
@@ -237,16 +282,35 @@
     }
 
     p {
-      padding: get-vw(16px);
+      padding: 0 get-vw(16px);
+      height: 100%;
       font-weight: 700;
       letter-spacing: 0.01em;
       color: $black;
     }
   }
 
+  h4,
+  .h4 {
+    margin-bottom: get-vw(16px);
+
+    @include media(1200px) {
+      margin-bottom: 16px;
+    }
+  }
+
   .h5,
   h5 {
-    max-width: get-vw(690px);
+    margin-bottom: get-vw(64px);
+    max-width: 60%;
+
+    @include media(1200px) {
+      margin-bottom: 64px;
+    }
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   &__done,
@@ -256,8 +320,13 @@
     width: 100%;
     min-height: get-vw(56px);
 
+    @include media(1200px) {
+      min-height: 60px;
+    }
+
     &::after {
       @include bg-contain;
+
       content: "";
       position: absolute;
       left: 50%;
@@ -266,6 +335,11 @@
       height: get-vw(32px);
       background-image: url("/src/images/other-done.svg");
       transform: translate(-50%, -50%);
+
+      @include media(1200px) {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
@@ -282,11 +356,14 @@
         @include font_20;
 
         padding: 0;
-
       }
 
       img {
         max-width: get-vw(120px);
+
+        @include media(1200px) {
+          max-width: 120px;
+        }
       }
     }
   }
@@ -312,7 +389,12 @@
     display: grid;
     align-items: center;
     grid-template-columns: 32% 17% 17% 17% 17%;
-    min-height: get-vw(56px);
+
+    @include media(1200px) {
+      width: 100%;
+      min-width: 800px;
+      overflow: auto;
+    }
   }
 
   &__none {
@@ -328,24 +410,51 @@
   h4,
   .h4 {
     max-width: 80%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
     @include flex(flex-start, space-between);
+
+    @include media($md) {
+      flex-direction: column;
+    }
   }
 
   &__img {
+    @include media($lg) {
+      margin-right: 50px;
+    }
+
+    @include media($md) {
+      margin: 0 auto 40px;
+    }
+
     img {
       min-width: get-vw(588px);
       min-height: get-vw(588px);
       max-width: get-vw(588px);
       max-height: get-vw(588px);
       object-fit: cover;
+
+      @include media($lg) {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 
   &__text {
     max-width: 40%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
 
     p {
       margin-bottom: get-vw(12px);
@@ -382,7 +491,6 @@
       @include font_14;
 
       display: inline-block;
-
 
       &:not(:last-child) {
         margin-bottom: get-vw(40px);
@@ -452,6 +560,15 @@
     letter-spacing: -0.03em;
     color: $white;
 
+    @include media(1200px) {
+      font-size: 32px;
+    }
+
+    @include media($md) {
+      margin-bottom: 32px;
+      max-width: 100%;
+    }
+
     &::after {
       left: 0;
       top: 0;
@@ -460,6 +577,10 @@
 
   &__wrapper {
     @include flex(center, space-between);
+
+    @include media($md) {
+      flex-direction: column;
+    }
   }
 
   &__ava {
@@ -467,16 +588,32 @@
     width: get-vw(88px);
     height: get-vw(88px);
     border-radius: 50%;
+
+    @include media(1200px) {
+      margin-right: 16px;
+      width: 88px;
+      height: 88px;
+    }
   }
 
   &__info {
     margin: 0 auto;
+
+    @include media($md) {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__info-box {
     display: flex;
     align-items: center;
     margin-bottom: get-vw(40px);
+
+    @include media($md) {
+      margin-bottom: 32px;
+      max-width: 100%;
+    }
 
     p {
       color: $white;
@@ -486,6 +623,10 @@
   &__info-title {
     margin-right: get-vw(32px);
     max-width: get-vw(228px);
+
+    @include media(1200px) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -495,11 +636,19 @@
   .h2,
   h2 {
     max-width: 60%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   .h4,
   h4 {
     max-width: 60%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   .swiper-slide {
@@ -578,27 +727,52 @@
   .h4,
   h4 {
     max-width: get-vw(329px);
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   p {
     max-width: get-vw(486px);
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
     @include flex(flex-start, space-between);
+
+    @include media($md) {
+      flex-direction: column;
+    }
   }
 
   &__main {
+    width: 100%;
     max-width: 50%;
+
+    @include media($md) {
+      max-width: 100%;
+    }
   }
 
   &__qr {
     display: flex;
     margin-top: get-vw(56px);
 
+    @include media($md) {
+      justify-content: center;
+    }
+
     li {
       display: flex;
       align-items: center;
+
+      @include media($md) {
+        flex-direction: column;
+      }
 
       &:not(:last-child) {
         margin-right: get-vw(32px);
@@ -611,6 +785,11 @@
           width: get-vw(144px);
           height: get-vw(48px);
           min-width: get-vw(144px);
+
+          @include media(1200px) {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -619,11 +798,22 @@
   &__qr-code {
     width: get-vw(96px);
     height: get-vw(96px);
+
+    @include media(1200px) {
+      margin-bottom: 16px;
+      width: 96px;
+      height: 96px;
+    }
   }
 
   &__img {
     width: 100%;
     max-width: 50%;
+
+    @include media($md) {
+      margin-top: 48px;
+      max-width: 100%;
+    }
 
     img {
       width: 100%;
@@ -666,6 +856,11 @@
     position: relative;
     margin-top: get-vw(-67px);
     padding-top: get-vw(123px);
+
+    @include media(1200px) {
+      margin-top: -67px;
+      padding-top: 123px;
+    }
   }
 
   .swiper-button-next,
@@ -676,8 +871,8 @@
   }
 
   .swiper-button-prev {
-    right: get-vw(72px);
     left: auto;
+    right: get-vw(72px);
     margin-top: 0;
   }
 
@@ -759,6 +954,11 @@
     position: relative;
     margin-top: get-vw(-67px);
     padding-top: get-vw(123px);
+
+    @include media(1200px) {
+      margin-top: -67px;
+      padding-top: 123px;
+    }
   }
 
   .swiper-slide {
@@ -773,20 +973,14 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    //padding: 0 get-vw(40px);
-    //width: 100%;
-    //
-    //@media (min-width: 1800px) {
-    //  max-width: get-vw(1520px);
-    //}
     right: get-vw(40px);
     top: 0;
     margin-top: 0;
   }
 
   .swiper-button-prev {
-    right: get-vw(128px);
     left: auto;
+    right: get-vw(128px);
     margin-top: 0;
   }
 
@@ -809,6 +1003,7 @@
 .swiper-button-next,
 .swiper-button-prev {
   @include flex(center, center);
+
   position: absolute;
   z-index: 10;
   width: get-vw(56px);
@@ -817,17 +1012,27 @@
   transition: background-color 0.3s;
   cursor: pointer;
 
-  &:after{
-    display: none;
+  @include media(1200px) {
+    width: 56px;
+    height: 56px;
   }
 
   &:hover {
     background-color: $green;
   }
 
+  &::after {
+    display: none;
+  }
+
   img {
     width: get-vw(24px);
     height: get-vw(24px);
+
+    @include media(1200px) {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
