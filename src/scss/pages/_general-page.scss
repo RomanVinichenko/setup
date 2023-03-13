@@ -189,6 +189,7 @@
 
     @include media(1200px) {
       margin-right: 24px;
+      max-width: 40%;
     }
 
     @include media($md) {
@@ -244,6 +245,10 @@
 
       @include media(1200px) {
         font-size: 191px;
+      }
+
+      @include media($sm) {
+        font-size: 121px;
       }
     }
   }
