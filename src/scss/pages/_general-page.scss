@@ -125,6 +125,10 @@
     margin-bottom: get-vw(32px);
     max-width: 80%;
 
+    @include media($lg) {
+      max-width: 90%;
+    }
+
     @media (max-width: 1200px) {
       margin-bottom: 24px;
     }
