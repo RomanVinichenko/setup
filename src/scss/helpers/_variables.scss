@@ -16,10 +16,8 @@ $white: #fff;
 $green: #2d9851;
 $green-black: #3a5a45;
 
-// viewport of design
+// Viewport of design
 $vw-viewport: 1800;
-
-//$vw-viewport: 1440;
 
 h1,
 h2,
@@ -37,6 +35,8 @@ h6,
     color: $green;
   }
 }
+
+// Fonts
 
 @mixin f_900 {
   font-family: "Archivo", sans-serif;
@@ -76,6 +76,7 @@ h6,
   @media (max-width: 1200px){
     font-size: 48px;
     line-height: 1.17;
+    letter-spacing: -0.03em;
   }
 }
 
@@ -121,18 +122,19 @@ h6,
   font-size: get-vw(24px);
   line-height: 1.33;
   letter-spacing: -0.01em;
-  @media (max-width: 1200px){
+  @media (max-width: 1200px) {
     font-size: 20px;
     line-height: 1.40;
+    letter-spacing: normal;
   }
 }
 
-@mixin font_24__400{
+@mixin font_24__400 {
   @include font_24;
   @include f_400;
 }
 
-@mixin font_20{
+@mixin font_20 {
   @include f_400;
   font-size: get-vw(20px);
   line-height: 1.4;
@@ -157,9 +159,9 @@ h6,
 }
 
 @mixin font_14__700{
-  @include f_400;
+  @include f_700;
   font-size: get-vw(14px);
-  line-height: 1.43;
+  line-height: 1.71;
   @media (max-width: 1200px){
     font-size: 14px;
   }
@@ -172,15 +174,8 @@ h6,
 
 @mixin font_button{
   @include font_14__700;
-  @include f_400;
+  @include f_700;
 }
-
-
-
-
-
-
-
 
 .f_900 {
   @include f_900
@@ -212,60 +207,6 @@ h6,
 
 .color_grey-medium {
   color: $gray-medium;
-}
-
-
-
-
-
-
-
-.lh_171 {
-  line-height: 1.71;
-}
-
-.lh_143 {
-  line-height: 1.43;
-}
-
-.lh_140 {
-  line-height: 1.4;
-}
-
-.lh_133 {
-  line-height: 1.33;
-}
-
-.lh-125 {
-  line-height: 1.25;
-}
-
-.lh-120 {
-  line-height: 1.2;
-}
-
-.lh_117 {
-  line-height: 1.17;
-}
-
-.lh_112 {
-  line-height: 1.12;
-}
-
-.ls_001 {
-  letter-spacing: -0.01em;
-}
-
-.ls_002 {
-  letter-spacing: -0.02em;
-}
-
-.ls_003 {
-  letter-spacing: -0.03em;
-}
-
-.font_64 {
-  @include fontSize(64px);
 }
 
 .font_48 {
@@ -302,94 +243,133 @@ h6,
 
 .mb-68 {
   margin-bottom: get-vw(68px);
+  @include media($lg) {
+    margin-bottom: 68px;
+  }
 }
 
 .mb-64 {
   margin-bottom: get-vw(64px);
+  @include media($lg) {
+    margin-bottom: 64px;
+  }
 }
 
 .mb-48 {
   margin-bottom: get-vw(48px);
+  @include media($lg) {
+    margin-bottom: 48px;
+  }
 }
 
 .mb-40 {
   margin-bottom: get-vw(40px);
+  @include media($lg) {
+    margin-bottom: 40px;
+  }
 }
 
 .mb-32 {
   margin-bottom: get-vw(32px);
+  @include media($lg) {
+    margin-bottom: 32px;
+  }
 }
 
 .mb-28 {
   margin-bottom: get-vw(28px);
+  @include media($lg) {
+    margin-bottom: 28px;
+  }
 }
 
 .mb-24 {
   margin-bottom: get-vw(24px);
+  @include media($lg) {
+    margin-bottom: 24px;
+  }
 }
 
 .mb-20 {
   margin-bottom: get-vw(20px);
+  @include media($lg) {
+    margin-bottom: 20px;
+  }
 }
 
 .mb-16 {
   margin-bottom: get-vw(16px);
+  @include media($lg) {
+    margin-bottom: 16px;
+  }
 }
 
 .mb-8 {
   margin-bottom: get-vw(8px);
+  @include media($lg) {
+    margin-bottom: 8px;
+  }
 }
 
 .mb-4 {
   margin-bottom: get-vw(4px);
+  @include media($lg) {
+    margin-bottom: 4px;
+  }
 }
 
 .mt-48 {
   margin-top: get-vw(48px);
+  @include media($lg) {
+    margin-top: 48px;
+  }
 }
 
 .mt-40 {
   margin-top: get-vw(40px);
+  @include media($lg) {
+    margin-top: 40px;
+  }
 }
 .font_105 {
-  @include font_105
+  @include font_105;
 }
 .font_64 {
-  @include font_64
+  @include font_64;
 }
 .font_48 {
-  @include font_48
+  @include font_48;
 }
 .font_40 {
-  @include font_40
+  @include font_40;
 }
 .font_32 {
-  @include font_32
+  @include font_32;
 }
 .font_32__400 {
-  @include font_32__400
+  @include font_32__400;
 }
 .font_24 {
-  @include font_24
+  @include font_24;
 }
 .font_24__400 {
-  @include font_24__400
+  @include font_24__400;
 }
 .font_20 {
   @include font_20;
 }
 .font_16__700 {
-  @include font_16__700
+  @include font_16__700;
 }
 .font_16 {
-  @include font_16
+  @include font_16;
 }
 .font_14__700 {
-  @include font_14__700
+  @include font_14__700;
 }
 .font_14 {
-  @include font_14
+  @include font_14;
 }
 .font_button {
-  @include font_button
+  @include font_button;
 }
