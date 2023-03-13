@@ -89,11 +89,12 @@ h6,
 
   font-size: get-vw(48px);
   line-height: 1.17;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 
   @media (max-width: 1200px) {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.2;
+    letter-spacing: -0.03em;
   }
 }
 
