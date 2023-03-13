@@ -1017,12 +1017,12 @@
     height: 56px;
   }
 
-  &:hover {
-    background-color: $green;
-  }
-
   &::after {
     display: none;
+  }
+
+  &:hover {
+    background-color: $green;
   }
 
   img {

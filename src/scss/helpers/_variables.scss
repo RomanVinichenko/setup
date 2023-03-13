@@ -197,13 +197,16 @@ h6,
 }
 
 .f_900 {
-  @include f_900; }
+  @include f_900;
+}
 
 .f_700 {
-  @include f_700; }
+  @include f_700;
+}
 
 .f_600 {
-  @include f_600; }
+  @include f_600;
+}
 
 .color_black {
   color: $black;
