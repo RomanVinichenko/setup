@@ -12,6 +12,27 @@
   .h5 {
     max-width: 50%;
   }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .session__wrapper{
+      flex: 0 0 50%;
+      max-width: 50%;
+      @media (max-width: 1200px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    .form_wrapper{
+      flex: 0 0 50%;
+      max-width: 50%;
+      @media (max-width: 1200px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
 
   .get-contact {
     li {
@@ -98,8 +119,27 @@
 }
 
 .referral {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .form_wrapper{
+      flex: 0 0 50%;
+      max-width: 50%;
+      @media (max-width: 1200px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
   &__wrapper {
     @include flex(flex-start, space-between);
+    flex: 0 0 50%;
+    max-width: 50%;
+    @media (max-width: 1200px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
 
   &__main {
@@ -123,6 +163,27 @@
 .career {
   &__wrapper {
     @include flex(flex-start, space-between);
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .career__wrapper{
+      flex: 0 0 50%;
+      max-width: 50%;
+      @media (max-width: 1200px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    .form_wrapper{
+      flex: 0 0 50%;
+      max-width: 50%;
+      @media (max-width: 1200px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
   }
 
   &__main {
