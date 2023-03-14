@@ -184,6 +184,7 @@ h6,
 
   @media (max-width: 1200px) {
     font-size: 14px;
+    line-height: 1.43;
   }
 }
 
@@ -268,7 +269,7 @@ h6,
 .mb-68 {
   margin-bottom: get-vw(68px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 68px;
   }
 }
@@ -276,7 +277,7 @@ h6,
 .mb-64 {
   margin-bottom: get-vw(64px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 64px;
   }
 }
@@ -284,7 +285,7 @@ h6,
 .mb-48 {
   margin-bottom: get-vw(48px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 48px;
   }
 }
@@ -292,7 +293,7 @@ h6,
 .mb-40 {
   margin-bottom: get-vw(40px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 40px;
   }
 }
@@ -300,7 +301,7 @@ h6,
 .mb-32 {
   margin-bottom: get-vw(32px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 32px;
   }
 }
@@ -308,7 +309,7 @@ h6,
 .mb-28 {
   margin-bottom: get-vw(28px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 28px;
   }
 }
@@ -316,7 +317,7 @@ h6,
 .mb-24 {
   margin-bottom: get-vw(24px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 24px;
   }
 }
@@ -324,7 +325,7 @@ h6,
 .mb-20 {
   margin-bottom: get-vw(20px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 20px;
   }
 }
@@ -332,7 +333,7 @@ h6,
 .mb-16 {
   margin-bottom: get-vw(16px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 16px;
   }
 }
@@ -340,7 +341,7 @@ h6,
 .mb-8 {
   margin-bottom: get-vw(8px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 8px;
   }
 }
@@ -348,7 +349,7 @@ h6,
 .mb-4 {
   margin-bottom: get-vw(4px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-bottom: 4px;
   }
 }
@@ -356,7 +357,7 @@ h6,
 .mt-48 {
   margin-top: get-vw(48px);
 
-  @include media($lg) {
+  @include media(1200px) {
     margin-top: 48px;
   }
 }

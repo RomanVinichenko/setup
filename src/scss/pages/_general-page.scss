@@ -22,6 +22,66 @@
 }
 
 .terms {
+  h6,
+  .h6,
+  h5,
+  .h5 {
+    margin: get-vw(48px) 0 get-vw(16px);
+
+    @include media(1200px) {
+      margin: 48px 0 16px;
+    }
+  }
+
+  .h5,
+  h5 {
+    font-weight: 700;
+    font-size: get-vw(24px) !important;
+    line-height: 1.33;
+    letter-spacing: -0.01em;
+
+    @include media(1200px) {
+      font-weight: 700;
+      font-size: 24px !important;
+      line-height: 1.33;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  h6,
+  .h6 {
+    font-weight: 600;
+    font-size: get-vw(20px) !important;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+
+    @include media(1200px) {
+      font-weight: 600;
+      font-size: 20px !important;
+      line-height: 1.4;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  h5:first-of-type,
+  .h5:first-of-type {
+    margin: 0 0 get-vw(16px);
+
+    @include media(1200px) {
+      margin: 0 0 16px;
+    }
+  }
+
+  .font_16__700 {
+    letter-spacing: 0.01em;
+  }
+
+  .mb-40 {
+    @include media(1200px) {
+      margin-bottom: 24px;
+    }
+  }
+
   .btn__white {
     border: get-vw(1px) solid $gray-medium;
 
@@ -51,14 +111,34 @@
   }
 
   &__main {
-    max-width: 55%;
+    max-width: 65%;
 
     @include media($lg) {
       max-width: 100%;
     }
 
+    .font_24,
+    .font_20 {
+      color: $black;
+    }
+
     p {
+      @include font_16;
+
       margin-bottom: get-vw(24px);
+      color: $gray-dark;
+
+      @include min-media(1800px) {
+        font-size: get-vw(16px) !important;
+      }
+
+      @include min-media(1200px) {
+        font-size: 14px;
+      }
+
+      @include media(1200px) {
+        font-size: 16px;
+      }
 
       @include media($lg) {
         margin-bottom: 24px;
@@ -67,8 +147,27 @@
 
     ul {
       li {
+        @include font_16;
+
         position: relative;
         padding-left: get-vw(18px);
+        color: $gray-dark;
+
+        @include min-media(1800px) {
+          font-size: get-vw(16px) !important;
+        }
+
+        @include min-media(1200px) {
+          font-size: 14px;
+        }
+
+        @include media(1200px) {
+          font-size: 16px;
+        }
+
+        @include media(1200px) {
+          padding-left: 18px;
+        }
 
         &::after {
           content: "";
@@ -79,17 +178,46 @@
           height: get-vw(6px);
           border-radius: 50%;
           background-color: $green;
+
+          @include media(1200px) {
+            top: 10px;
+            width: 6px;
+            height: 6px;
+          }
         }
 
         &:not(:last-child) {
           margin-bottom: get-vw(16px);
+
+          @include media(1200px) {
+            margin-bottom: 16px;
+          }
         }
       }
     }
 
     ol {
       li {
+        @include font_16;
+
         margin-left: get-vw(22px);
+        color: $gray-dark;
+
+        @include min-media(1800px) {
+          font-size: get-vw(16px) !important;
+        }
+
+        @include min-media(1200px) {
+          font-size: 14px;
+        }
+
+        @include media(1200px) {
+          font-size: 16px;
+        }
+
+        @include media(1200px) {
+          margin-left: 22px;
+        }
 
         @include media($lg) {
           margin-left: 18px;
@@ -97,13 +225,17 @@
 
         &:not(:last-child) {
           margin-bottom: get-vw(16px);
+
+          @include media(1200px) {
+            margin-bottom: 16px;
+          }
         }
 
         &::marker {
           @include font_16;
           @include f_600;
 
-          line-height: get-vw(24px);
+          letter-spacing: normal;
           color: $black;
         }
       }
@@ -149,8 +281,16 @@
 
     img {
       margin-left: auto;
-      width: get-vw(486px);
-      height: get-vw(486px);
+
+      @include min-media(1800px) {
+        width: get-vw(486px) !important;
+        height: get-vw(486px) !important;
+      }
+
+      @include min-media(1200px) {
+        width: 486px;
+        height: 486px;
+      }
 
       @media (max-width: 1200px) {
         width: 100%;
